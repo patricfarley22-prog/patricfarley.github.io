@@ -4,13 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>From Truck Driver to AI Builder: My Story · Patric Farley</title>
-  <meta name="description" content="Working 12-hour shifts, building in evenings. How I went from zero coding to AI systems.">
+  <meta name="description" content="Not a transformation story. Just a story about showing up. How I went from truck driver to building AI systems that run 24/7.">
+  <meta property="og:title" content="From Truck Driver to AI Builder: My Story">
+  <meta property="og:description" content="Not a transformation story. Just a story about showing up.">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <style>
     :root {
       --bg: #0a0a0a; --bg-elevated: #111111; --bg-card: #161616;
       --border: #222222; --text: #e8e8e8; --text-secondary: #888888; --text-muted: #555555;
-      --accent: #00d4aa;
+      --accent: #00d4aa; --accent-dim: rgba(0, 212, 170, 0.15);
+      --danger: #ff6b35;
     }
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
@@ -21,99 +24,134 @@
     h1 { font-size: 2.2rem; font-weight: 700; line-height: 1.2; margin-bottom: 1.5rem; letter-spacing: -0.02em; }
     h2 { font-size: 1.3rem; font-weight: 600; margin: 2.5rem 0 1rem; color: var(--accent); }
     p { color: var(--text-secondary); margin-bottom: 1.2rem; }
+    blockquote { border-left: 3px solid var(--accent); padding-left: 1.5rem; margin: 1.5rem 0; color: var(--text); font-style: italic; font-size: 1.05rem; }
     .highlight { background: rgba(0, 212, 170, 0.1); padding: 0.1rem 0.3rem; border-radius: 3px; color: var(--accent); }
-    .quote { border-left: 3px solid var(--accent); padding-left: 1.5rem; margin: 2rem 0; font-style: italic; color: var(--text-secondary); }
+    .agent-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem; margin: 1.5rem 0; }
+    .agent-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 1rem; text-align: center; }
+    .agent-card .emoji { font-size: 1.5rem; margin-bottom: 0.5rem; }
+    .agent-card .name { font-weight: 600; font-size: 0.9rem; margin-bottom: 0.25rem; }
+    .agent-card .desc { font-size: 0.8rem; color: var(--text-muted); }
+    .state-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1.5rem 0; }
+    .state-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 1rem; }
+    .state-item .label { font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 0.25rem; }
+    .state-item .value { font-size: 0.95rem; }
     .footer { border-top: 1px solid var(--border); margin-top: 4rem; padding-top: 2rem; text-align: center; color: var(--text-muted); font-size: 0.85rem; }
-    .footer a { color: var(--accent); text-decoration: none; }
+    a { color: var(--accent); }
   </style>
 </head>
 <body>
   <div class="container">
-    <a href="index.html" class="back">← Back to Home</a>
-    <div class="date">March 28, 2026 · 10 min read</div>
+    <a href="index.html#blog" class="back">← Back to Blog</a>
+    <div class="date">March 2026 · 8 min read</div>
     <h1>From Truck Driver to AI Builder: My Story</h1>
-    
-    <p>I'm 27 years old. I drive trucks for a living — 12-hour shifts, home every day, weekends off. I make okay money. But I want more. Not just money. <span class="highlight">Freedom</span>.</p>
-    
-    <p>This is how I went from knowing nothing about code to building AI systems that run while I sleep.</p>
-    
-    <h2>The Beginning (Age 15)</h2>
-    
-    <p>I started working at 15. Saved $10,000 by age 21. Not because I was smart — because I was consistent. Worked hard. Spent little. That $10K became the seed money for everything that followed.</p>
-    
-    <p>At 19, something clicked. I stopped smoking weed. Started working out. Started eating better. Started <span class="highlight">caring about my future</span>.</p>
-    
-    <h2>The College Years</h2>
-    
-    <p>College is where I made my first real friends. Started businesses with them. Learned that I could figure things out if I just <span class="highlight">started</span>. Didn't wait for permission. Didn't wait to feel ready.</p>
-    
-    <p>First business funded with that $10K savings. Failed. Learned. Tried again.</p>
-    
+
+    <p>Not a transformation story. Just a story about showing up.</p>
+
+    <h2>Introduction</h2>
+    <p>I'm 27. I drive trucks for a living — 12-hour shifts, local routes, home every night. The pay is steady. The hours are long. But the real value isn't the paycheck. It's the <span class="highlight">predictability</span>.</p>
+    <p>I know exactly when I work and when I don't. That predictability is leverage most people never recognize.</p>
+
+    <h2>The Foundation (Age 15)</h2>
+    <p>I started working at 15. Not because I had to — because I wanted to understand what building something felt like. By 21, I had saved $10,000. Not from a high-paying job. From <strong>consistency</strong>. Showing up. Doing the work. Spending less than I earned.</p>
+    <p>That $10K became my tuition for the real world. First business attempt? Failed. Second? Also failed. But each one taught me something classrooms couldn't: <strong>how to start before I felt ready</strong>.</p>
+
+    <h2>The Pivot (Age 19)</h2>
+    <p>At 19, I made a decision that changed everything. I started working out. Eating better. Reading books I didn't understand at first. Asking questions I was afraid to ask.</p>
+    <p>Most importantly, I started believing that I could figure things out if I just <strong>refused to quit</strong>.</p>
+
+    <h2>College & First Businesses</h2>
+    <p>College is where I found my people. Real friends who pushed me to build things. We started businesses together. Some worked. Most didn't. But the pattern was clear: the people who win aren't the smartest — they're the ones who <strong>keep going when it gets boring</strong>.</p>
+    <p>I earned my Associate's degree in Computer Science along the way. It gave me a foundation, but the real education happened between classes — late nights debugging code, chasing ideas that seemed impossible until they weren't.</p>
+
     <h2>The Truck Job</h2>
-    
-    <p>Now I drive trucks. Local routes, home every night. It's not glamorous. But it pays the bills. And it gives me something most people don't have: <span class="highlight">predictable time</span>.</p>
-    
-    <p>I know exactly when I work and when I'm free. That predictability is leverage. I use my evenings and weekends to build.</p>
-    
+    <p>Now I drive. Local delivery, 12-hour shifts, weekends available for overtime. It's not what I pictured at 15. But it gave me something I couldn't buy: <strong>structured time</strong>.</p>
+    <p>I know my schedule. I know my windows. And I've learned to treat my evenings and weekends like a second job — except I'm the boss, and the work compounds.</p>
+
     <h2>Discovering AI (2025)</h2>
-    
-    <p>I heard about ChatGPT like everyone else. Tried it. Was amazed. Started paying $20/month. Then $40/month. Then $60/month as I added more tools.</p>
-    
-    <p>But something bothered me: I was renting my tools. If I stopped paying, I lost everything. My workflows, my data, my automations — all tied to someone else's platform.</p>
-    
-    <h2>The Pivot to Local</h2>
-    
-    <p>I discovered Ollama. Local AI models. Free. Private. Owned by me.</p>
-    
-    <p>The learning curve was steep. I spent weeks figuring out installations, configurations, model downloads. Failed more times than I can count. But each failure taught me something.</p>
-    
-    <div class="quote">
-      "I don't have talent. I have persistence. I show up every day and do the work. That's the only advantage I need."
-    </div>
-    
+    <p>I started with ChatGPT like everyone else. $20/month. Then another tool. Then another. Data feeds. Automation platforms. Before I knew it, I was paying <strong style="color: #ff6b35;">$110/month</strong> for tools I didn't own, on platforms I couldn't control.</p>
+    <p>The problem wasn't the cost. It was the <strong>dependency</strong>. If I stopped paying, my workflows died. My data stayed behind. I was renting my productivity.</p>
+
+    <h2>The Move to Local</h2>
+    <p>I found Ollama. Local AI models running on my own machine. No subscriptions. No data leaving my house. No terms of service changes that break my workflows overnight.</p>
+    <p>The learning curve was real. Nights spent debugging configurations, downloading models, failing, trying again. But each failure was mine to learn from. And the knowledge stuck.</p>
+    <p>I use <span class="highlight">Ollama Pro Cloud ($20/month)</span> for the heavy lifting when I need cloud-grade performance. But everything else? Local. Owned. Permanent.</p>
+
     <h2>Building Cortex (2026)</h2>
-    
-    <p>Cortex started as a personal assistant. Now it's a multi-agent system with 5 specialized AI agents:</p>
-    
-    <ul style="color: var(--text-secondary); padding-left: 1.5rem; margin-bottom: 1.2rem;">
-      <li>Coder — writes and debugs code</li>
-      <li>Researcher — finds alpha and opportunities</li>
-      <li>Writer — generates content and copy</li>
-      <li>Trader — monitors markets and alerts</li>
-      <li>Organizer — manages files and receipts</li>
-    </ul>
-    
-    <p>All running 24/7. All costing $0. All on my machine.</p>
-    
-    <h2>The Current State</h2>
-    
-    <p><strong>Day job:</strong> Truck driver (12hr shifts)</p>
-    <p><strong>Evenings:</strong> Building AI systems, copy trading, content creation</p>
-    <p><strong>Systems built:</strong> Receipt tracker, copy trading monitor, content pipeline, multi-agent system</p>
-    <p><strong>Monthly AI costs:</strong> <span class="highlight">$0</span></p>
-    <p><strong>Debt:</strong> Still $45K. But now I have tools that can help me earn my way out.</p>
-    
-    <h2>Why I Share This</h2>
-    
-    <p>I'm not special. I don't have a computer science degree. I didn't go to Stanford. I'm a truck driver who decided to learn.</p>
-    
-    <p>If I can build this, you can too. Or I can build it for you. Either way, the tools exist. The knowledge is free. The only question is whether you'll start.</p>
-    
-    <div class="quote">
-      "The best time to start was yesterday. The second best time is now."
+    <p>Cortex started as a personal project. Now it's a multi-agent system that runs 24/7:</p>
+
+    <div class="agent-grid">
+      <div class="agent-card">
+        <div class="emoji">💻</div>
+        <div class="name">Coder</div>
+        <div class="desc">Writes, debugs, ships code</div>
+      </div>
+      <div class="agent-card">
+        <div class="emoji">🔍</div>
+        <div class="name">Researcher</div>
+        <div class="desc">Finds alpha before the crowd</div>
+      </div>
+      <div class="agent-card">
+        <div class="emoji">✍️</div>
+        <div class="name">Writer</div>
+        <div class="desc">Generates content and copy</div>
+      </div>
+      <div class="agent-card">
+        <div class="emoji">📈</div>
+        <div class="name">Trader</div>
+        <div class="desc">Monitors markets and alerts</div>
+      </div>
+      <div class="agent-card">
+        <div class="emoji">📁</div>
+        <div class="name">Organizer</div>
+        <div class="desc">Manages receipts and files</div>
+      </div>
     </div>
-    
+
+    <p>Five agents. One system. <span class="highlight">Zero ongoing subscription costs.</span> All running on hardware I control.</p>
+
+    <h2>The Current State</h2>
+    <div class="state-grid">
+      <div class="state-item">
+        <div class="label">Day Job</div>
+        <div class="value">Truck driver, 12-hour shifts</div>
+      </div>
+      <div class="state-item">
+        <div class="label">Side Hustle</div>
+        <div class="value">Building AI systems, trading, content</div>
+      </div>
+      <div class="state-item">
+        <div class="label">Systems Live</div>
+        <div class="value">Receipt tracker, trading monitor, agents</div>
+      </div>
+      <div class="state-item">
+        <div class="label">Monthly AI Costs</div>
+        <div class="value" style="color: var(--accent);">$20 (Ollama Pro Cloud)</div>
+      </div>
+      <div class="state-item">
+        <div class="label">Education</div>
+        <div class="value">Associate's in Computer Science</div>
+      </div>
+      <div class="state-item">
+        <div class="label">Built With</div>
+        <div class="value">Evenings and weekends</div>
+      </div>
+    </div>
+
+    <h2>Why I Share This</h2>
+    <p>I'm not special. I don't have a trust fund. I didn't go to a name-brand school. I'm a truck driver who decided to learn one more thing every day than he forgot.</p>
+    <p>The tools exist. The knowledge is free. The communities are welcoming. The only question is whether you'll start before you feel ready.</p>
+
+    <blockquote>
+      "The gap between people who win and people who don't isn't talent. It's the willingness to look stupid for long enough to get good."
+    </blockquote>
+
     <h2>What's Next</h2>
-    
-    <p>My goal is simple: build systems that generate income while I sleep. Then scale them. Then teach others to do the same.</p>
-    
-    <p>The receipt tracker is my first product. The AI setup service is my second. More coming.</p>
-    
-    <p>I'm not building an empire overnight. I'm building it one evening at a time.</p>
-    
+    <p>Build systems that generate value while I sleep. Scale what works. Teach others to do the same.</p>
+    <p>The receipt tracker is product one. The AI setup service is product two. There will be more.</p>
+    <p>Not because I'm trying to build an empire. Because I'm trying to build a life where <span class="highlight">my time belongs to me</span>.</p>
+
     <div class="footer">
-      <p>Want me to build something for you? <a href="index.html#contact">Get in touch →</a></p>
-      <p>© 2026 Patric Farley · <a href="index.html">patricfarley.com</a></p>
+      <p>Built by Patric Farley with AI assistance from Cortex · <a href="index.html">Back to Home</a></p>
     </div>
   </div>
 </body>
