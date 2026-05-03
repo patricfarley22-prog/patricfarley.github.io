@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How I Built a Copy Trading System That Runs While I Sleep · Patric Farley</title>
+  <meta name="description" content="From $240 to automated copy trading on Hyperliquid. My exact setup, lead selection process, and lessons learned.">
+  <meta property="og:title" content="How I Built a Copy Trading System That Runs While I Sleep">
+  <meta property="og:description" content="My exact setup for automated copy trading on Hyperliquid.">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0a0a0a; --bg-elevated: #111111; --bg-card: #161616;
+      --border: #222222; --text: #e8e8e8; --text-secondary: #888888; --text-muted: #555555;
+      --accent: #00d4aa;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
+    .container { max-width: 700px; margin: 0 auto; padding: 3rem 1.5rem; }
+    .back { color: var(--accent); text-decoration: none; font-size: 0.9rem; margin-bottom: 2rem; display: inline-block; }
+    .back:hover { text-decoration: underline; }
+    .date { font-family: 'JetBrains Mono'; font-size: 0.75rem; color: var(--text-muted); margin-bottom: 1rem; }
+    h1 { font-size: 2.2rem; font-weight: 700; line-height: 1.2; margin-bottom: 1.5rem; letter-spacing: -0.02em; }
+    h2 { font-size: 1.3rem; font-weight: 600; margin: 2.5rem 0 1rem; color: var(--accent); }
+    p { color: var(--text-secondary); margin-bottom: 1.2rem; }
+    ul { color: var(--text-secondary); margin-bottom: 1.2rem; padding-left: 1.5rem; }
+    li { margin-bottom: 0.5rem; }
+    .highlight { background: rgba(0, 212, 170, 0.1); padding: 0.1rem 0.3rem; border-radius: 3px; color: var(--accent); }
+    .code { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 1rem; font-family: 'JetBrains Mono'; font-size: 0.85rem; color: var(--text-secondary); margin: 1rem 0; overflow-x: auto; }
+    .footer { border-top: 1px solid var(--border); margin-top: 4rem; padding-top: 2rem; text-align: center; color: var(--text-muted); font-size: 0.85rem; }
+    .footer a { color: var(--accent); text-decoration: none; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="index.html" class="back">← Back to Home</a>
+    <div class="date">May 2, 2026 · 8 min read</div>
+    <h1>How I Built a Copy Trading System That Runs While I Sleep</h1>
+    
+    <p>I work 12-hour shifts driving trucks. When I get home, I'm exhausted. The last thing I want to do is stare at charts for 3 hours. But I also don't want to miss opportunities.</p>
+    
+    <p>So I built a system that copies proven traders automatically. Here's exactly how I did it — and what it cost me.</p>
+    
+    <h2>Starting Point: $240</h2>
+    
+    <p>I had $240 in USDC sitting in a Hyperliquid wallet. Not enough to trade myself (I'd get rekt), but enough to copy someone who knows what they're doing.</p>
+    
+    <p>The platform I chose was <span class="highlight">CoinPilot</span>. It connects to Hyperliquid and lets you subscribe to lead traders. When they open a position, your account copies it automatically. When they close, you close. Zero manual intervention.</p>
+    
+    <h2>Finding the Right Lead Trader</h2>
+    
+    <p>This is the most important decision. A bad lead trader will lose your money faster than you can blink. Here's what I look for:</p>
+    
+    <ul>
+      <li><strong>Win rate > 75%</strong> — Consistency beats home runs</li>
+      <li><strong>Sortino > 1.5</strong> — Risk-adjusted returns matter</li>
+      <li><strong>Max drawdown < 5%</strong> — I can't stomach 50% drops</li>
+      <li><strong>200+ trades</strong> — Statistical significance</li>
+      <li><strong>Active > 90 days</strong> — Not a flash in the pan</li>
+    </ul>
+    
+    <p>My first lead: <span class="highlight">79.9% win rate</span>, $46K account, 229 trades over 170 days. Total P&L: +$55,253. That's the kind of track record I want to copy.</p>
+    
+    <h2>The Setup</h2>
+    
+    <div class="code">
+Platform: Hyperliquid via CoinPilot
+Lead 1: 0xdb7cc8d3... (79.9% win)
+Lead 2: 0xa1b6d8ef... (98.6% win)
+Mode: Fixed $20-50 per trade
+Stop Loss: 10%
+Check frequency: Once per day
+    </div>
+    
+    <p>I set it to <span class="highlight">FIXED mode</span> (not proportional). This means every trade is $20-50 regardless of account size. Safer than proportional, which can blow up if the lead uses huge leverage.</p>
+    
+    <h2>Monitoring (The Fun Part)</h2>
+    
+    <p>I built a custom monitoring system that checks my copy trading status every day. It reports:</p>
+    
+    <ul>
+      <li>Current balance & P&L</li>
+      <li>Lead trader stats (win rate, drawdown)</li>
+      <li>Open positions</li>
+      <li>SOL/DOWGE price alerts</li>
+    </ul>
+    
+    <p>All delivered to my Telegram. I check it during my lunch break. Takes 30 seconds.</p>
+    
+    <h2>Lessons Learned</h2>
+    
+    <p><strong>Lesson 1:</strong> Don't panic at red. My lead got liquidated once. I lost $3.02. But the system is designed to survive drawdowns. Patience wins.</p>
+    
+    <p><strong>Lesson 2:</strong> Diversify leads. One lead with 98.6% win rate and another with 79.9% gives me exposure to different strategies.</p>
+    
+    <p><strong>Lesson 3:</strong> Fixed position sizing is safer. Proportional mode would have me risking $100+ per trade by now. Fixed keeps me disciplined.</p>
+    
+    <h2>Current Status</h2>
+    
+    <p>Balance: <span class="highlight">$236.98</span> (started $240)</p>
+    <p>Time spent: 5 minutes per day</p>
+    <p>Emotional stress: Zero</p>
+    
+    <p>That's the power of automation. I don't need to be a great trader. I just need to copy one.</p>
+    
+    <div class="footer">
+      <p>Want the same setup? <a href="index.html#contact">I install it for you →</a></p>
+      <p>© 2026 Patric Farley · <a href="index.html">patricfarley.com</a></p>
+    </div>
+  </div>
+</body>
+</html>

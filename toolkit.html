@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Free Solana Alpha Toolkit - Patric Farley</title>
+  <meta name="description" content="My exact Solana alpha setup. Copy trading config, scanner commands, free tools. Download free.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0a0a0a; --bg-elevated: #111111; --bg-card: #161616;
+      --border: #222222; --border-light: #2a2a2a;
+      --text: #e8e8e8; --text-secondary: #888888; --text-muted: #555555;
+      --accent: #00d4aa; --accent-dim: rgba(0, 212, 170, 0.15);
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      padding: 2rem;
+    }
+    .container { max-width: 800px; margin: 0 auto; }
+    .header { text-align: center; margin-bottom: 3rem; padding: 2rem 0; border-bottom: 1px solid var(--border); }
+    .header h1 { font-size: 2rem; margin-bottom: 0.5rem; }
+    .header h1 span { color: var(--accent); }
+    .header p { color: var(--text-secondary); }
+    .section { margin-bottom: 3rem; }
+    .section h2 {
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid var(--accent);
+      display: inline-block;
+    }
+    .section p, .section li {
+      color: var(--text-secondary);
+      margin-bottom: 0.75rem;
+      line-height: 1.7;
+    }
+    .section ul { padding-left: 1.5rem; }
+    .section ul li { margin-bottom: 0.5rem; }
+    .code-block {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1rem;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      margin: 1rem 0;
+      overflow-x: auto;
+    }
+    .highlight { color: var(--accent); font-weight: 600; }
+    .btn {
+      display: inline-block;
+      background: var(--accent);
+      color: var(--bg);
+      padding: 1rem 2rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      margin-top: 1rem;
+    }
+    .cta-box {
+      background: var(--bg-elevated);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 2rem;
+      text-align: center;
+      margin-top: 3rem;
+    }
+    .cta-box h3 { margin-bottom: 0.5rem; }
+    .cta-box p { color: var(--text-secondary); margin-bottom: 1rem; }
+    @media print {
+      body { background: white; color: black; }
+      .btn, .cta-box { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>🚀 <span>Solana Alpha Toolkit</span></h1>
+      <p>By Patric Farley · May 2026 · Free Guide</p>
+    </div>
+
+    <div class="section">
+      <h2>1. My Copy Trading Setup</h2>
+      <p>I started with <span class="highlight">$240 USDC</span> on Hyperliquid and set up copy trading with 2 lead traders. Here's my exact config:</p>
+      <ul>
+        <li><strong>Platform:</strong> Hyperliquid via CoinPilot</li>
+        <li><strong>Lead 1:</strong> 0xdb7cc8... (79.9% win rate, $46K account)</li>
+        <li><strong>Lead 2:</strong> 0xa1b6d8... (98.6% win rate, $169K account)</li>
+        <li><strong>Mode:</strong> Fixed $20-50 per trade</li>
+        <li><strong>Stop Loss:</strong> 10%</li>
+      </ul>
+      <div class="code-block">
+# Check subscription status
+node coinpilot_cli.mjs list-subscriptions
+
+# Check account balance
+node coinpilot_cli.mjs hl-account --wallet YOUR_WALLET
+
+# Monitor lead trader
+node trader-monitor.mjs check
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>2. Scanner Commands</h2>
+      <p>These are the exact commands I run to find alpha:</p>
+      <div class="code-block">
+# Early Hold Scanner (established tokens)
+node quality-hold-scanner.mjs
+
+# Gem Finder (fresh launches)
+node unified-scanner.mjs
+
+# Dip Scanner (buy the dip)
+node dip-scanner.mjs
+
+# Whale Tracker
+node whale-tracker.mjs
+      </div>
+      <p>Each scanner outputs: token name, price change, liquidity, contract address, and a confidence score. I only act on scores > 70.</p>
+    </div>
+
+    <div class="section">
+      <h2>3. My Free Tool Stack</h2>
+      <ul>
+        <li><strong>Ollama</strong> - Free local AI (replaces ChatGPT Pro)</li>
+        <li><strong>OpenClaw</strong> - AI automation platform</li>
+        <li><strong>CoinGecko API</strong> - Free price data</li>
+        <li><strong>DexScreener</strong> - Free token scanner</li>
+        <li><strong>Hyperliquid</strong> - Perp DEX (needs VPN in US)</li>
+        <li><strong>CoinPilot</strong> - Copy trading platform</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>4. Risk Rules</h2>
+      <p>I never break these rules. They've saved me from catastrophic losses:</p>
+      <ul>
+        <li>Never risk more than 5% of portfolio on a single trade</li>
+        <li>Always set stop losses (10% max)</li>
+        <li>Never chase pumps > 50% in 1 hour</li>
+        <li>Only trade tokens with > $100K liquidity</li>
+        <li>Check whale wallets before buying (use whale-tracker)</li>
+        <li>Take profits at 2x, never be greedy</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>5. My Watchlist</h2>
+      <div class="code-block">
+SOL (Solana)     - Base layer, hold long-term
+DOWGE (DJI6930)  - Meme, small position
+TROLL            - Meme, watching
+WOBBLES          - Meme, watching
+PENGO            - Meme, watching
+HACHI            - Meme, watching
+      </div>
+    </div>
+
+    <div class="cta-box">
+      <h3>Want Me To Set This Up For You?</h3>
+      <p>I install the entire system on your computer. Copy trading, scanners, alerts — everything. $500 one-time.</p>
+      <a href="index.html#contact" class="btn">Get Your AI System →</a>
+    </div>
+
+    <p style="text-align: center; margin-top: 3rem; color: var(--text-muted); font-size: 0.85rem;">
+      © 2026 Patric Farley · <a href="index.html" style="color: var(--accent);">patricfarley.com</a>
+    </p>
+  </div>
+</body>
+</html>

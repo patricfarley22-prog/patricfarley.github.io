@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Why I Switched to Local AI (And Saved $200/Month) · Patric Farley</title>
+  <meta name="description" content="Cloud AI was eating my budget. Local models changed everything. Here's the math and the setup.">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0a0a0a; --bg-elevated: #111111; --bg-card: #161616;
+      --border: #222222; --text: #e8e8e8; --text-secondary: #888888; --text-muted: #555555;
+      --accent: #00d4aa;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
+    .container { max-width: 700px; margin: 0 auto; padding: 3rem 1.5rem; }
+    .back { color: var(--accent); text-decoration: none; font-size: 0.9rem; margin-bottom: 2rem; display: inline-block; }
+    .back:hover { text-decoration: underline; }
+    .date { font-family: 'JetBrains Mono'; font-size: 0.75rem; color: var(--text-muted); margin-bottom: 1rem; }
+    h1 { font-size: 2.2rem; font-weight: 700; line-height: 1.2; margin-bottom: 1.5rem; letter-spacing: -0.02em; }
+    h2 { font-size: 1.3rem; font-weight: 600; margin: 2.5rem 0 1rem; color: var(--accent); }
+    p { color: var(--text-secondary); margin-bottom: 1.2rem; }
+    ul { color: var(--text-secondary); margin-bottom: 1.2rem; padding-left: 1.5rem; }
+    li { margin-bottom: 0.5rem; }
+    .highlight { background: rgba(0, 212, 170, 0.1); padding: 0.1rem 0.3rem; border-radius: 3px; color: var(--accent); }
+    .comparison { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1.5rem 0; }
+    .comparison-box { background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; padding: 1.5rem; }
+    .comparison-box h4 { color: var(--text); margin-bottom: 0.75rem; }
+    .comparison-box p { margin-bottom: 0.5rem; font-size: 0.9rem; }
+    .comparison-box .price { font-family: 'JetBrains Mono'; font-size: 1.5rem; font-weight: 700; color: var(--accent); }
+    .footer { border-top: 1px solid var(--border); margin-top: 4rem; padding-top: 2rem; text-align: center; color: var(--text-muted); font-size: 0.85rem; }
+    .footer a { color: var(--accent); text-decoration: none; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="index.html" class="back">← Back to Home</a>
+    <div class="date">April 15, 2026 · 7 min read</div>
+    <h1>Why I Switched to Local AI (And Saved $200/Month)</h1>
+    
+    <p>Last year I was paying $200/month for AI tools. ChatGPT Plus, Claude Pro, Midjourney, various APIs. The bills stacked up. And every month, I worried about my data going to some server I don't control.</p>
+    
+    <p>Then I discovered local AI. Now I pay <span class="highlight">$0</span>. And the results are better.</p>
+    
+    <h2>The Breaking Point</h2>
+    
+    <p>It wasn't one thing. It was death by a thousand subscriptions:</p>
+    
+    <ul>
+      <li>ChatGPT Plus: $20/mo</li>
+      <li>Claude Pro: $20/mo</li>
+      <li>Midjourney: $10/mo</li>
+      <li>OpenAI API: $30-50/mo (varies)</li>
+      <li>Various SaaS tools: $50-100/mo</li>
+    </ul>
+    
+    <p><strong>Total: ~$200/month</strong>. That's $2,400/year. For a guy making $45K with $45K in debt, that's real money.</p>
+    
+    <h2>The Discovery: Ollama</h2>
+    
+    <p>I found Ollama — a tool that downloads and runs AI models locally. At first I was skeptical. "Surely cloud AI is better," I thought.</p>
+    
+    <p>Then I tried Kimi K2.6 via Ollama cloud. It was <span class="highlight">faster</span> than ChatGPT. More accurate than Claude. And it knew my local files because it was running on my machine.</p>
+    
+    <h2>Cloud vs Local: The Real Comparison</h2>
+    
+    <div class="comparison">
+      <div class="comparison-box">
+        <h4>☁️ Cloud AI</h4>
+        <p>❌ $20-200/mo subscriptions</p>
+        <p>❌ Your data leaves your device</p>
+        <p>❌ Requires internet connection</p>
+        <p>❌ Rate limits on free tiers</p>
+        <p>❌ Vendor lock-in</p>
+        <p>❌ Can change pricing anytime</p>
+        <div class="price" style="color: #ff6b35;">$200/mo</div>
+      </div>
+      <div class="comparison-box">
+        <h4>💻 Local AI</h4>
+        <p>✅ $0/month forever</p>
+        <p>✅ Your data stays local</p>
+        <p>✅ Works offline</p>
+        <p>✅ No rate limits</p>
+        <p>✅ You own everything</p>
+        <p>✅ No vendor lock-in</p>
+        <div class="price">$0/mo</div>
+      </div>
+    </div>
+    
+    <h2>My Current Stack</h2>
+    
+    <p>Here's what I run locally:</p>
+    
+    <ul>
+      <li><strong>Kimi K2.6</strong> — Main reasoning model (via Ollama cloud)</li>
+      <li><strong>Qwen 3.5</strong> — Coding and technical tasks</li>
+      <li><strong>GLM-5</strong> — General purpose, fast responses</li>
+      <li><strong>llava:7b</strong> — Vision model for receipt scanning</li>
+    </ul>
+    
+    <p>Total cost: <span class="highlight">$0</span>. I use the Ollama cloud integration (still free, just routes through their servers for models too big for my machine). For models that fit locally, I don't even need internet.</p>
+    
+    <h2>What About Quality?</h2>
+    
+    <p>I ran a test: I gave the same complex prompt to ChatGPT-4, Claude 3.5, and Kimi K2.6 (local). The results:</p>
+    
+    <ul>
+      <li><strong>ChatGPT-4:</strong> Good, but generic. Felt like it was trying to be safe.</li>
+      <li><strong>Claude 3.5:</strong> Better reasoning, but slower. Sometimes refused valid requests.</li>
+      <li><strong>Kimi K2.6:</strong> Best coding output. Fastest. No refusals on technical content. Knew my project context because it has access to my files.</li>
+    </ul>
+    
+    <p>For my use case (building tools, analyzing crypto, automating tasks), <span class="highlight">Kimi wins</span>. And it costs me nothing.</p>
+    
+    <h2>The Hidden Benefit: Privacy</h2>
+    
+    <p>When you use ChatGPT, your conversations train their models. Your trading strategies, your business ideas, your personal notes — they all go to OpenAI's servers.</p>
+    
+    <p>With local AI, <span class="highlight">nothing leaves your machine</span>. I can analyze my portfolio, brainstorm business ideas, and write personal content without worrying about data leaks.</p>
+    
+    <h2>The Math Over 1 Year</h2>
+    
+    <p><strong>Cloud AI:</strong> $200/mo × 12 = <span class="highlight">$2,400</span></p>
+    <p><strong>Local AI:</strong> $0/mo × 12 = <span class="highlight">$0</span></p>
+    
+    <p><strong>Savings: $2,400/year</strong></p>
+    
+    <p>That $2,400 could be:</p>
+    
+    <ul>
+      <li>A new trading allocation</li>
+      <li>Paying down debt</li>
+      <li>Investing in my wife's business</li>
+      <li>Emergency fund</li>
+    </ul>
+    
+    <h2>Should You Switch?</h2>
+    
+    <p>If you're paying for AI tools and you're technical enough to follow setup instructions, <span class="highlight">yes</span>. The savings are real. The quality is comparable. The privacy is unmatched.</p>
+    
+    <p>If you're not technical, that's exactly why I offer the $500 setup service. I handle the installation, configuration, and training. You get all the benefits without the learning curve.</p>
+    
+    <div class="footer">
+      <p>Want the same setup? <a href="index.html#contact">I install it for you →</a></p>
+      <p>© 2026 Patric Farley · <a href="index.html">patricfarley.com</a></p>
+    </div>
+  </div>
+</body>
+</html>
