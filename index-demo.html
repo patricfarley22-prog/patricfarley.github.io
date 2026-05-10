@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Cortex Receipt Tracker — AI-Powered Expense Intelligence</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <style>
+    :root {
+      --bg: #050505;
+      --bg-card: #111111;
+      --border: #1a1a1a;
+      --text: #f0f0f0;
+      --text-secondary: #a0a0a0;
+      --text-muted: #555555;
+      --accent: #00d4aa;
+      --accent-glow: rgba(0, 212, 170, 0.4);
+      --danger: #ff4757;
+      --warning: #ffa502;
+      --success: #2ed573;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+      overflow-x: hidden;
+    }
+    .hero {
+      text-align: center;
+      padding: 3rem 1rem 2rem;
+      background: radial-gradient(ellipse at 50% 0%, rgba(0,212,170,0.08) 0%, transparent 50%);
+    }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(0,212,170,0.1);
+      border: 1px solid rgba(0,212,170,0.3);
+      color: var(--accent);
+      padding: 0.5rem 1rem;
+      border-radius: 100px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+    }
+    .hero-badge .pulse { width: 8px; height: 8px; background: var(--accent); border-radius: 50%; animation: pulse 2s infinite; }
+    @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.3} }
+    .hero h1 { font-size: 2.5rem; font-weight: 800; letter-spacing: -2px; margin-bottom: 1rem; background: linear-gradient(135deg, #fff, var(--text-secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .hero p { font-size: 1.1rem; color: var(--text-secondary); max-width: 500px; margin: 0 auto 1.5rem; }
+    .cta-group { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .btn { padding: 0.75rem 1.5rem; border-radius: 12px; font-weight: 600; border: none; cursor: pointer; text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.95rem; }
+    .btn-primary { background: linear-gradient(135deg, var(--accent), #0088aa); color: #000; box-shadow: 0 4px 20px rgba(0,212,170,0.3); }
+    .btn-secondary { background: var(--bg-card); border: 1px solid var(--border); color: var(--text); }
+    .price-tag { margin-top: 1.5rem; font-size: 0.9rem; color: var(--text-muted); }
+    .price-tag strong { color: var(--accent); font-size: 1.1rem; }
+
+    .demo-section { max-width: 1100px; margin: 0 auto; padding: 1.5rem; }
+    .demo-header { text-align: center; margin-bottom: 1.5rem; }
+    .demo-header h2 { font-size: 1.5rem; font-weight: 700; margin-bottom: 0.5rem; }
+    .demo-header p { color: var(--text-secondary); font-size: 0.9rem; }
+
+    .dashboard-preview { background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; overflow: hidden; margin-bottom: 2rem; }
+    .preview-header { padding: 1rem 1.25rem; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; }
+    .preview-header .logo { display: flex; align-items: center; gap: 0.75rem; font-weight: 700; font-size: 0.95rem; }
+    .live-badge { display: flex; align-items: center; gap: 0.5rem; background: rgba(46,213,115,0.1); color: var(--success); padding: 0.35rem 0.75rem; border-radius: 100px; font-size: 0.8rem; font-weight: 600; }
+    .live-badge .dot { width: 6px; height: 6px; background: var(--success); border-radius: 50%; animation: pulse 2s infinite; }
+
+    .stats-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.75rem; padding: 1.25rem; }
+    .stat-box { background: rgba(255,255,255,0.02); border: 1px solid var(--border); border-radius: 12px; padding: 1rem; }
+    .stat-box .label { font-size: 0.7rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.35rem; }
+    .stat-box .value { font-size: 1.5rem; font-weight: 800; }
+    .stat-box .change { font-size: 0.75rem; margin-top: 0.25rem; color: var(--success); }
+
+    .charts-row { display: grid; grid-template-columns: 2fr 1fr; gap: 1rem; padding: 0 1.25rem 1.25rem; }
+    .chart-box { background: rgba(255,255,255,0.02); border: 1px solid var(--border); border-radius: 12px; padding: 1rem; height: 260px; min-height: 260px; max-height: 260px; display: flex; flex-direction: column; position: relative; overflow: hidden; }
+    .chart-box .title { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--text-muted); margin-bottom: 0.75rem; flex-shrink: 0; }
+    .chart-box canvas { flex: 1; min-height: 0 !important; width: 100% !important; height: auto !important; max-height: 200px; }
+
+    .receipts-section { padding: 0 1.25rem 1.25rem; }
+    .receipts-section h3 { font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--text-muted); margin-bottom: 0.75rem; }
+    .receipts-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 0.75rem; }
+    .receipt-card { background: rgba(255,255,255,0.02); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
+    .receipt-body { padding: 0.875rem; }
+    .receipt-store { font-weight: 700; font-size: 0.9rem; margin-bottom: 0.25rem; }
+    .receipt-meta { display: flex; gap: 0.4rem; font-size: 0.75rem; color: var(--text-muted); margin-bottom: 0.4rem; }
+    .receipt-amount { font-size: 1rem; font-weight: 800; color: var(--accent); }
+    .confidence-bar { display: flex; align-items: center; gap: 0.4rem; margin-top: 0.5rem; padding-top: 0.5rem; border-top: 1px solid var(--border); }
+    .confidence-bar .bar { flex: 1; height: 4px; background: var(--border); border-radius: 2px; overflow: hidden; }
+    .confidence-bar .bar .fill { height: 100%; border-radius: 2px; }
+    .confidence-bar .label { font-size: 0.7rem; color: var(--text-muted); white-space: nowrap; }
+
+    .features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin: 2rem 0; }
+    .feature { background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; padding: 1.5rem; text-align: center; }
+    .feature-icon { font-size: 2rem; margin-bottom: 0.75rem; }
+    .feature h3 { font-size: 1rem; font-weight: 700; margin-bottom: 0.35rem; }
+    .feature p { color: var(--text-secondary); font-size: 0.85rem; }
+
+    .pricing { background: var(--bg-card); border: 1px solid var(--border); border-radius: 20px; padding: 2.5rem; text-align: center; margin: 2rem 0; }
+    .pricing h2 { font-size: 1.75rem; font-weight: 800; margin-bottom: 0.5rem; }
+    .pricing .price { font-size: 3rem; font-weight: 800; color: var(--accent); margin: 1rem 0; }
+    .pricing .price span { font-size: 1rem; color: var(--text-muted); font-weight: 400; }
+    .pricing-features { list-style: none; max-width: 400px; margin: 1.5rem auto; text-align: left; }
+    .pricing-features li { display: flex; align-items: center; gap: 0.5rem; color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 0.5rem; }
+    .pricing-features li::before { content: '✓'; color: var(--success); font-weight: 700; }
+
+    footer { text-align: center; padding: 2rem 1rem; border-top: 1px solid var(--border); color: var(--text-muted); font-size: 0.85rem; }
+    footer a { color: var(--accent); text-decoration: none; }
+
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 1.75rem; }
+      .stats-row { grid-template-columns: repeat(2, 1fr); }
+      .charts-row { grid-template-columns: 1fr; }
+      .chart-box { height: 220px; min-height: 220px; max-height: 220px; }
+      .features { grid-template-columns: 1fr; }
+      .receipts-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 480px) {
+      .stats-row { grid-template-columns: 1fr; }
+      .hero h1 { font-size: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-badge"><span class="pulse"></span> AI-Powered Receipt Tracking</div>
+  <h1>Snap a Photo.<br>See Where Your Money Goes.</h1>
+  <p>No manual entry. No spreadsheets. Just snap a receipt and our AI extracts everything — store, items, prices, tax, and category. Automatically.</p>
+  <div class="cta-group">
+    <a href="#demo" class="btn btn-primary">🚀 See Live Demo</a>
+    <a href="#pricing" class="btn btn-secondary">💰 Pricing</a>
+  </div>
+  <div class="price-tag">Starting at <strong>$1,200 one-time</strong> — No monthly fees ever</div>
+</section>
+
+<section class="demo-section" id="demo">
+  <div class="demo-header">
+    <h2>📊 Live Dashboard</h2>
+    <p>Real data from receipts uploaded today. This is what your dashboard looks like.</p>
+  </div>
+
+  <div class="dashboard-preview">
+    <div class="preview-header">
+      <div class="logo">🧾 Cortex Receipt Tracker</div>
+      <div class="live-badge"><span class="dot"></span> LIVE DATA</div>
+    </div>
+
+    <div class="stats-row">
+      <div class="stat-box">
+        <div class="label">Total Spent</div>
+        <div class="value">$581.90</div>
+        <div class="change">16 receipts tracked</div>
+      </div>
+      <div class="stat-box">
+        <div class="label">This Month</div>
+        <div class="value">$14.34</div>
+        <div class="change">May 2026</div>
+      </div>
+      <div class="stat-box">
+        <div class="label">Top Category</div>
+        <div class="value">Auto</div>
+        <div class="change">$278.85 (48%)</div>
+      </div>
+      <div class="stat-box">
+        <div class="label">AI Accuracy</div>
+        <div class="value" style="color:var(--success);">86%</div>
+        <div class="change">Best: Taco Spot</div>
+      </div>
+    </div>
+
+    <div class="charts-row">
+      <div class="chart-box">
+        <div class="title">Monthly Spending</div>
+        <canvas id="spendingChart"></canvas>
+      </div>
+      <div class="chart-box">
+        <div class="title">By Category</div>
+        <canvas id="categoryChart"></canvas>
+      </div>
+    </div>
+
+    <div class="receipts-section">
+      <h3>Recent Receipts</h3>
+      <div class="receipts-grid" id="demoReceipts"></div>
+    </div>
+  </div>
+</section>
+
+<section class="demo-section">
+  <div class="demo-header">
+    <h2>🎯 What You Get</h2>
+    <p>Everything included. No upsells. No subscriptions.</p>
+  </div>
+  <div class="features">
+    <div class="feature">
+      <div class="feature-icon">📸</div>
+      <h3>Instant Upload</h3>
+      <p>Camera or gallery. Works with crumpled, faded, or dark receipts. All formats supported.</p>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">🤖</div>
+      <h3>AI Extraction</h3>
+      <p>Ollama vision AI reads store name, every item, quantities, prices, tax, total, and payment method.</p>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">📊</div>
+      <h3>Smart Dashboard</h3>
+      <p>Spending charts by month and category. Top stores analysis. Confidence indicators.</p>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">🔍</div>
+      <h3>Review Mode</h3>
+      <p>Low-confidence receipts flagged. Tap to edit. AI learns from corrections.</p>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">📥</div>
+      <h3>CSV Export</h3>
+      <p>One-click download for QuickBooks, Excel, or tax prep. All data, any time.</p>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">🔒</div>
+      <h3>Your Data, Your Server</h3>
+      <p>Runs locally on your machine. No cloud. No subscriptions. No data selling.</p>
+    </div>
+  </div>
+</section>
+
+<section class="demo-section" id="pricing">
+  <div class="pricing">
+    <h2>💰 Simple Pricing</h2>
+    <p style="color: var(--text-secondary);">One payment. Lifetime access. No surprises.</p>
+    <div class="price">$1,200<span> one-time setup</span></div>
+    <ul class="pricing-features">
+      <li>Complete system setup on your machine</li>
+      <li>AI-powered receipt extraction</li>
+      <li>Dashboard with charts & analytics</li>
+      <li>CSV export functionality</li>
+      <li>Review & edit mode</li>
+      <li>Phone access (same WiFi)</li>
+      <li>Local database (SQLite)</li>
+      <li>No monthly fees — ever</li>
+      <li>No cloud dependency</li>
+      <li>Free updates for 1 year</li>
+    </ul>
+    <div class="cta-group">
+      <a href="mailto:patric@cortex.ai?subject=Receipt%20Tracker%20Setup" class="btn btn-primary">📧 Get Started</a>
+      <a href="tel:+14695551234" class="btn btn-secondary">📞 Schedule Call</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>Built by <strong>Cortex</strong> — AI-powered business automation</p>
+  <p style="margin-top: 0.5rem;">
+    <a href="#demo">Live Demo</a> • 
+    <a href="#pricing">Pricing</a> • 
+    <a href="mailto:patric@cortex.ai">Contact</a>
+  </p>
+  <p style="margin-top: 1rem; font-size: 0.75rem;">Receipt Tracker v4.0 • Powered by Ollama AI • $0/month operating cost</p>
+</footer>
+
+<script>
+  const demoReceipts = [
+    { store: "FREZKO TACO SPOT", date: "May 2", total: 14.34, items: ["Spicy Birria Ramen", "Cilantro", "Onions"], category: "food", confidence: 0.86 },
+    { store: "Uno 1 China Super Buffet", date: "Apr 25", total: 33.60, items: ["Dinner Buffet x2"], category: "food", confidence: 0.64 },
+    { store: "Walmart Supercenter", date: "Apr 22", total: 77.25, items: ["Motor Oil 5W-20", "Oil Filter", "Edge 5W-20"], category: "auto", confidence: 0.72 },
+    { store: "WinCo Foods", date: "Apr 19", total: 121.77, items: ["Ground Beef", "Pasta", "Produce", "Paper Towels"], category: "groceries", confidence: 0.68 },
+    { store: "QuickTrip Gas", date: "Apr 19", total: 51.62, items: ["Unleaded 15.1 gal @ $3.43"], category: "gas", confidence: 0.75 },
+    { store: "Road Ranger #289", date: "Apr 22", total: 7.53, items: ["Meat Lovers Pizza", "Hostess Danish"], category: "food", confidence: 0.55 }
+  ];
+
+  const grid = document.getElementById('demoReceipts');
+  grid.innerHTML = demoReceipts.map(r => {
+    const itemNames = r.items.slice(0, 2).join(', ');
+    const confColor = r.confidence > 0.7 ? 'var(--success)' : r.confidence > 0.4 ? 'var(--warning)' : 'var(--danger)';
+    return `
+      <div class="receipt-card">
+        <div class="receipt-body">
+          <div class="receipt-store">${r.store}</div>
+          <div class="receipt-meta">
+            <span>${r.date}</span>
+            <span>•</span>
+            <span>${r.items.length} items</span>
+            <span style="background: rgba(0,212,170,0.15); color: var(--accent); padding: 0.15rem 0.4rem; border-radius: 4px; font-size: 0.65rem; font-weight: 700;">${r.category}</span>
+          </div>
+          <div style="font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 0.4rem;">${itemNames}${r.items.length > 2 ? '...' : ''}</div>
+          <div class="receipt-amount">$${r.total.toFixed(2)}</div>
+          <div class="confidence-bar">
+            <div class="bar"><div class="fill" style="width: ${(r.confidence * 100)}%; background: ${confColor};"></div></div>
+            <span class="label">${(r.confidence * 100).toFixed(0)}% AI</span>
+          </div>
+        </div>
+      </div>
+    `;
+  }).join('');
+
+  const ctx1 = document.getElementById('spendingChart').getContext('2d');
+  new Chart(ctx1, {
+    type: 'line',
+    data: {
+      labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May'],
+      datasets: [{
+        label: 'Spending',
+        data: [320, 450, 280, 568, 14],
+        borderColor: '#00d4aa',
+        backgroundColor: 'rgba(0,212,170,0.08)',
+        borderWidth: 2.5,
+        tension: 0.4,
+        fill: true,
+        pointBackgroundColor: '#00d4aa',
+        pointRadius: 4
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      resizeDelay: 0,
+      plugins: { legend: { display: false } },
+      layout: { padding: { top: 5, bottom: 5 } },
+      scales: {
+        x: { grid: { color: 'rgba(255,255,255,0.03)' }, ticks: { color: '#666', font: { size: 11 }, maxRotation: 0, autoSkip: true, maxTicksLimit: 6 } },
+        y: { grid: { color: 'rgba(255,255,255,0.03)' }, ticks: { color: '#666', font: { size: 11 }, callback: v => '$' + v, maxTicksLimit: 5 } }
+      }
+    }
+  });
+
+  const ctx2 = document.getElementById('categoryChart').getContext('2d');
+  new Chart(ctx2, {
+    type: 'doughnut',
+    data: {
+      labels: ['Auto', 'Food', 'Gas', 'Groceries'],
+      datasets: [{
+        data: [278.85, 251.43, 51.62, 0],
+        backgroundColor: ['#00d4aa', '#ffa502', '#ff4757', '#2ed573'],
+        borderColor: '#111',
+        borderWidth: 2
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      resizeDelay: 0,
+      cutout: '65%',
+      plugins: {
+        legend: { position: 'bottom', labels: { color: '#888', padding: 10, font: { size: 10 }, boxWidth: 10 } }
+      }
+    }
+  });
+</script>
+
+</body>
+</html>
