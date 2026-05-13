@@ -1,0 +1,1693 @@
+{
+  "summary": {
+    "filesScanned": 1830,
+    "filesWithIssues": 124,
+    "totalIssues": 159,
+    "critical": 31,
+    "high": 85,
+    "medium": 43,
+    "low": 0,
+    "riskScore": 821
+  },
+  "findings": [
+    {
+      "rule": "SEC-003",
+      "severity": "MEDIUM",
+      "message": "Async functions without adequate error handling",
+      "fix": "Add try/catch blocks to all async operations",
+      "file": "affiliate-automation\\content-generator.mjs",
+      "ruleName": "Error Handling"
+    },
+    {
+      "rule": "SEC-002",
+      "severity": "HIGH",
+      "message": "Command execution detected",
+      "fix": "Use parameterized commands or safer alternatives",
+      "matches": [
+        "execSync("
+      ],
+      "file": "affiliate-automation\\run-and-exit.mjs",
+      "ruleName": "No Insecure Functions"
+    },
+    {
+      "rule": "SEC-002",
+      "severity": "HIGH",
+      "message": "Command execution detected",
+      "fix": "Use parameterized commands or safer alternatives",
+      "matches": [
+        "execSync("
+      ],
+      "file": "affiliate-automation\\scheduler.mjs",
+      "ruleName": "No Insecure Functions"
+    },
+    {
+      "rule": "SEC-001",
+      "severity": "CRITICAL",
+      "message": "Telegram bot token detected",
+      "matches": [
+        "8168630761:AAG5yWkTQxgzqYnLlE40OTmqcOg6uOyUsiE"
+      ],
+      "file": "config-backup-20260501-062354.json",
+      "ruleName": "No Hardcoded Secrets"
+    },
+    {
+      "rule": "SEC-002",
+      "severity": "MEDIUM",
+      "message": "User input used without validation",
+      "fix": "Validate all user inputs before use",
+      "matches": [
+        "req.params",
+        "req.body",
+        "req.body"
+      ],
+      "file": "cortex-dashboard\\server\\index.js",
+      "ruleName": "No Insecure Functions"
+    },
+    {
+      "rule": "SEC-004",
+      "severity": "HIGH",
+      "message": "User input used without adequate validation",
+      "fix": "Add input validation before using user data",
+      "file": "cortex-dashboard\\server\\index.js",
+      "ruleName": "Input Validation"
+    },
+    {
+      "rule": "SEC-001",
+      "severity": "HIGH",
+      "message": "Ethereum wallet address detected",
+      "matches": [
+        "0x532373DBE4236227324807AF563ca48ce1e30D64",
+        "0xdb7cc8d3b4bfb4365f59f0f66cd8a84b74b29a5c"
+      ],
+      "file": "cortex-dashboard\\server\\trading-integration.js",
+      "ruleName": "No Hardcoded Secrets"
+    },
+    {
+      "rule": "SEC-002",
+      "severity": "HIGH",
+      "message": "Command execution detected",
+      "fix": "Use parameterized commands or safer alternatives",
+      "matches": [
+        "execSync(",
+        "execSync("
+      ],
+      "file": "cortex-dashboard\\server\\trading-integration.js",
+      "ruleName": "No Insecure Functions"
+    },
+    {
+      "rule": "SEC-002",
+      "severity": "MEDIUM",
+      "message": "Debug mode enabled",
+      "fix": "Disable debug mode in production",
+      "matches": [
+        "DEBUG=true",
+        "DEBUG=true"
+      ],
+      "file": "CORTEX-HARNESS-DESIGN.md",
+      "ruleName": "No Insecure Functions"
+    },
+    {
+      "rule": "SEC-001",
+      "severity": "HIGH",
+      "message": "Ethereum wallet address detected",
+      "matches": [
+        "0xdb7cc8d3b4bfb4365f59f0f66cd8a84b74b29a5c",
+        "0x013472e1De3620E51ED6285Ea79667Ce8f5673B9",
+        "0x532373DBE4236227324807AF563ca48ce1e30D64"
+      ],
+      "file": "dashboard.md",
+      "ruleName": "No Hardcoded Secrets"
+    },
+    {
+      "rule": "SEC-002",
+      "severity": "MEDIUM",
+      "message": "Debug mode enabled",
+      "fix": "Disable debug mode in production",
+      "matches": [
+        "DEBUG=true"
+      ],
+      "file": "data\\module-audit-report.json",
+      "ruleName": "No Insecure Functions"
+    },
+    {
+      "rule": "SEC-002",
+      "severity": "HIGH",
+      "message": "Command execution detected",
+      "fix": "Use parameterized commands or safer alternatives",
+      "matches": [
+        "execSync(",
+        "execSync(",
+        "execSync("
+      ],
+      "file": "fix-links.js",
+      "ruleName": "No Insecure Functions"
+    },
+    {
+      "rule": "SEC-001",
+      "severity": "CRITICAL",
+      "message": "Telegram bot token detected",
+      "matches": [
+        "8168630761:AAGYDg-1p-wr64U7_u30NWqlep8X5_gr2fY"
+      ],
+      "file": "foundation-v1-backup\\MEMORY.md",
+      "ruleName": "No Hardcoded Secrets"
+    },
+    {
+      "rule": "SEC-001",
+      "severity": "HIGH",
+      "message": "Ethereum wallet address detected",
+      "matches": [
+        "0xdb7cc8d3b4bfb4365f59f0f66cd8a84b74b29a5c",
+        "0x013472e1De3620E51ED6285Ea79667Ce8f5673B9",
+        "0x532373DBE4236227324807AF563ca48ce1e30D64"
+      ],
+      "file": "foundation-v1-backup\\MEMORY.md",
+      "ruleName": "No Hardcoded Secrets"
+    },
+    {
+      "rule": "SEC-001",
+      "severity": "CRITICAL",
+      "message": "Telegram bot token detected",
+      "matches": [
+        "8168630761:AAG5yWkTQxgzqYnLlE40OTmqcOg6uOyUsiE"
+      ],
+      "file": "memory\\.dreams\\short-term-recall.json",
+      "ruleName": "No Hardcoded Secrets"
+    },
+    {
+      "rule": "SEC-001",
+      "severity": "HIGH",
+      "message": "Ethereum wallet address detected",
+      "matches": [
+        "0xdb7cc8d3b4bfb4365f59f0f66cd8a84b74b29a5c",
+        "0x532373DBE4236227324807AF563ca48ce1e30D64",
+        "0x013472e1De3620E51ED6285Ea79667Ce8f5673B9"
+      ],
+      "file": "memory\\.dreams\\short-term-recall.json",
+      "ruleName": "No Hardcoded Secrets"
+    },
+    {
+      "rule": "SEC-002",
+      "severity": "MEDIUM",
+      "message": "Insecure HTTP instead of HTTPS",
+      "fix": "Use HTTPS for all external connections",
+      "matches": [
+        "http://",
+        "http://"
+      ],
+      "file": "memory\\.dreams\\short-term-recall.json",
+      "ruleName": "No Insecure Functions"
+    },
+    {
+      "rule": "SEC-001",
+      "severity": "CRITICAL",
+      "message": "Telegram bot token detected",
+      "matches": [
+        "8168630761:AAGYDg-1p-wr64U7_u30NWqlep8X5_gr2fY"
+      ],
+      "file": "memory\\2026-02-21.md",
+      "ruleName": "No Hardcoded Secrets"
+    },
+    {
+      "rule": "SEC-001",
+      "severity": "HIGH",
+      "message": "Ethereum wallet address detected",
+      "matches": [
+        "0x013472e1De3620E51ED6285Ea79667Ce8f5673B9",
+        "0xdb7cc8d3b4bfb4365f59f0f66cd8a84b74b29a5c",
+        "0x013472e1De3620E51ED6285Ea79667Ce8f5673B9"
+      ],
+      "file": "memory\\2026-03-20.md",
+      "ruleName": "No Hardcoded Secrets"
+    },
+    {
+      "rule": "SEC-001",
+      "severity": "HIGH",
+      "message": "Ethereum wallet address detected",
+      "matches": [
+        "0xdb7cc8d3b4bfb4365f59f0f66cd8a84b74b29a5c",
+        "0x532373DBE4236227324807AF563ca48ce1e30D64",
+        "0x013472e1De3620E51ED6285Ea79667Ce8f5673B9"
+      ],
+      "file": "memory\\2026-03-26.md",
+      "ruleName": "No Hardcoded Secrets"
+    },
+    {
+      "rule": "SEC-001",
+      "severity": "HIGH",
+      "message": "Ethereum wallet address detected",
+      "matches": [
+        "0xdb7cc8d3b4bfb4365f59f0f66cd8a84b74b29a5c"
+      ],
+      "file": "memory\\2026-03-27.md",
+      "ruleName": "No Hardcoded Secrets"
+    },
+    {
+      "rule": "SEC-001",
+      "severity": "HIGH",
+      "message": "Ethereum wallet address detected",
+      "matches": [
+        "0xdb7cc8d3b4bfb4365f59f0f66cd8a84b74b29a5c",
+        "0xdb7cc8d3b4bfb4365f59f0f66cd8a84b74b29a5c"
+      ],
+      "file": "memory\\2026-03-30.md",
+      "ruleName": "No Hardcoded Secrets"
+    },
+    {
+      "rule": "SEC-001",
+      "severity": "HIGH",
+      "message": "Ethereum wallet address detected",
+      "matches": [
+        "0xdb7cc8d3b4bfb4365f59f0f66cd8a84b74b29a5c",
+        "0x52516d3ee158365393598028055769354d45a3dd"
+      ],
+      "file": "memory\\2026-04-07.md",
+      "ruleName": "No Hardcoded Secrets"
+    },
+    {
+      "rule": "SEC-001",
+      "severity": "HIGH",
+      "message": "Ethereum wallet address detected",
+      "matches": [
+        "0xdb7cc8d3b4bfb4365f59f0f66cd8a84b74b29a5c",
+        "0xdb7cc8d3b4bfb4365f59f0f66cd8a84b74b29a5c",
+        "0x532373dbe4236227324807af563ca48ce1e30d64"
+      ],
+      "file": "memory\\2026-04-10-coinpilot-lead-trader-update.md",
+      "ruleName": "No Hardcoded Secrets"
+    },
+    {
+      "rule": "SEC-001",
+      "severity": "HIGH",
+      "message": "Ethereum wallet address detected",
+      "matches": [
+        "0xa1b6d8efbcb2fb750a84dbc05649fa4968034f04"
+      ],
+      "file": "memory\\2026-04-11-the-machine-trader.md",
+      "ruleName": "No Hardcoded Secrets"
+    },
+    {
+      "rule": "SEC-001",
+      "severity": "HIGH",
+      "message": "Ethereum wallet address detected",
+      "matches": [
+        "0x532373DBE4236227324807AF563ca48ce1e30D64",
+        "0xdb7cc8d3b4bfb4365f59f0f66cd8a84b74b29a5c",
+        "0x532373DBE4236227324807AF563ca48ce1e30D64"
+      ],
+      "file": "memory\\2026-04-14.md",
+      "ruleName": "No Hardcoded Secrets"
+    },
+    {
+      "rule": "SEC-001",
+      "severity": "CRITICAL",
+      "message": "Telegram bot token detected",
+      "matches": [
+        "8168630761:AAG5yWkTQxgzqYnLlE40OTmqcOg6uOyUsiE"
+      ],
+      "file": "memory\\2026-04-17.md",
+      "ruleName": "No Hardcoded Secrets"
+    },
+    {
+      "rule": "SEC-002",
+      "severity": "HIGH",
+      "message": "Command execution detected",
+      "fix": "Use parameterized commands or safer alternatives",
+      "matches": [
+        "spawn ("
+      ],
+      "file": "memory\\2026-04-24.md",
+      "ruleName": "No Insecure Functions"
+    },
+    {
+      "rule": "SEC-002",
+      "severity": "MEDIUM",
+      "message": "Insecure HTTP instead of HTTPS",
+      "fix": "Use HTTPS for all external connections",
+      "matches": [
+        "http://",
+        "http://",
+        "http://"
+      ],
+      "file": "memory\\2026-05-08.md",
+      "ruleName": "No Insecure Functions"
+    },
+    {
+      "rule": "SEC-002",
+      "severity": "MEDIUM",
+      "message": "Insecure HTTP instead of HTTPS",
+      "fix": "Use HTTPS for all external connections",
+      "matches": [
+        "http://",
+        "http://"
+      ],
+      "file": "memory\\dreaming\\2026-05-08.md",
+      "ruleName": "No Insecure Functions"
+    },
+    {
+      "rule": "SEC-001",
+      "severity": "CRITICAL",
+      "message": "Telegram bot token detected",
+      "matches": [
+        "8168630761:AAG5yWkTQxgzqYnLlE40OTmqcOg6uOyUsiE"
+      ],
+      "file": "memory\\MEMORY.md",
+      "ruleName": "No Hardcoded Secrets"
+    },
+    {
+      "rule": "SEC-001",
+      "severity": "HIGH",
+      "message": "Ethereum wallet address detected",
+      "matches": [
+        "0xdb7cc8d3b4bfb4365f59f0f66cd8a84b74b29a5c",
+        "0x013472e1De3620E51ED6285Ea79667Ce8f5673B9",
+        "0x532373DBE4236227324807AF563ca48ce1e30D64"
+      ],
+      "file": "memory\\MEMORY.md",
+      "ruleName": "No Hardcoded Secrets"
+    },
+    {
+      "rule": "SEC-001",
+      "severity": "CRITICAL",
+      "message": "Telegram bot token detected",
+      "matches": [
+        "8168630761:AAG5yWkTQxgzqYnLlE40OTmqcOg6uOyUsiE"
+      ],
+      "file": "MEMORY.md",
+      "ruleName": "No Hardcoded Secrets"
+    },
+    {
+      "rule": "SEC-001",
+      "severity": "HIGH",
+      "message": "Ethereum wallet address detected",
+      "matches": [
+        "0xdb7cc8d3b4bfb4365f59f0f66cd8a84b74b29a5c",
+        "0x013472e1De3620E51ED6285Ea79667Ce8f5673B9",
+        "0x532373DBE4236227324807AF563ca48ce1e30D64"
+      ],
+      "file": "MEMORY.md",
+      "ruleName": "No Hardcoded Secrets"
+    },
+    {
+      "rule": "SEC-002",
+      "severity": "HIGH",
+      "message": "Command execution detected",
+      "fix": "Use parameterized commands or safer alternatives",
+      "matches": [
+        "execSync("
+      ],
+      "file": "multi-agent\\agents\\coder-enhanced.mjs",
+      "ruleName": "No Insecure Functions"
+    },
+    {
+      "rule": "SEC-002",
+      "severity": "HIGH",
+      "message": "Command execution detected",
+      "fix": "Use parameterized commands or safer alternatives",
+      "matches": [
+        "execSync(",
+        "execSync(",
+        "execSync("
+      ],
+      "file": "multi-agent\\install-service.mjs",
+      "ruleName": "No Insecure Functions"
+    },
+    {
+      "rule": "SEC-002",
+      "severity": "HIGH",
+      "message": "Command execution detected",
+      "fix": "Use parameterized commands or safer alternatives",
+      "matches": [
+        "spawn("
+      ],
+      "file": "multi-agent\\orchestrator-enhanced.mjs",
+      "ruleName": "No Insecure Functions"
+    },
+    {
+      "rule": "SEC-002",
+      "severity": "HIGH",
+      "message": "Command execution detected",
+      "fix": "Use parameterized commands or safer alternatives",
+      "matches": [
+        "spawn("
+      ],
+      "file": "multi-agent\\orchestrator.mjs",
+      "ruleName": "No Insecure Functions"
+    },
+    {
+      "rule": "SEC-002",
+      "severity": "HIGH",
+      "message": "Command execution detected",
+      "fix": "Use parameterized commands or safer alternatives",
+      "matches": [
+        "exec("
+      ],
+      "file": "multi-agent\\README.md",
+      "ruleName": "No Insecure Functions"
+    },
+    {
+      "rule": "SEC-002",
+      "severity": "HIGH",
+      "message": "Command execution detected",
+      "fix": "Use parameterized commands or safer alternatives",
+      "matches": [
+        "spawn("
+      ],
+      "file": "multi-agent\\run-and-exit.mjs",
+      "ruleName": "No Insecure Functions"
+    },
+    {
+      "rule": "SEC-002",
+      "severity": "HIGH",
+      "message": "Command execution detected",
+      "fix": "Use parameterized commands or safer alternatives",
+      "matches": [
+        "spawn("
+      ],
+      "file": "multi-agent\\service-wrapper.mjs",
+      "ruleName": "No Insecure Functions"
+    },
+    {
+      "rule": "SEC-002",
+      "severity": "HIGH",
+      "message": "Command execution detected",
+      "fix": "Use parameterized commands or safer alternatives",
+      "matches": [
+        "spawn("
+      ],
+      "file": "multi-agent\\start-enhanced.mjs",
+      "ruleName": "No Insecure Functions"
+    },
+    {
+      "rule": "SEC-002",
+      "severity": "CRITICAL",
+      "message": "Dangerous eval() usage",
+      "fix": "Use JSON.parse() or a safer alternative",
+      "matches": [
+        "eval("
+      ],
+      "file": "PATRIC-AI-ENGINEER-BOOTCAMP.md",
+      "ruleName": "No Insecure Functions"
+    },
+    {
+      "rule": "SEC-002",
+      "severity": "MEDIUM",
+      "message": "Insecure HTTP instead of HTTPS",
+      "fix": "Use HTTPS for all external connections",
+      "matches": [
+        "http://",
+        "http://",
+        "http://"
+      ],
+      "file": "PATRIC-AI-ENGINEER-BOOTCAMP.md",
+      "ruleName": "No Insecure Functions"
+    },
+    {
+      "rule": "SEC-002",
+      "severity": "MEDIUM",
+      "message": "Debug mode enabled",
+      "fix": "Disable debug mode in production",
+      "matches": [
+        "DEBUG=true"
+      ],
+      "file": "PATRIC-AI-ENGINEER-BOOTCAMP.md",
+      "ruleName": "No Insecure Functions"
+    },
+    {
+      "rule": "SEC-002",
+      "severity": "HIGH",
+      "message": "Command execution detected",
+      "fix": "Use parameterized commands or safer alternatives",
+      "matches": [
+        "exec("
+      ],
+      "file": "products\\receipt-tracker\\build\\server-v3.mjs",
+      "ruleName": "No Insecure Functions"
+    },
+    {
+      "rule": "SEC-002",
+      "severity": "MEDIUM",
+      "message": "Insecure HTTP instead of HTTPS",
+      "fix": "Use HTTPS for all external connections",
+      "matches": [
+        "http://"
+      ],
+      "file": "products\\receipt-tracker\\build\\server-v3.mjs",
+      "ruleName": "No Insecure Functions"
+    },
+    {
+      "rule": "SEC-002",
+      "severity": "HIGH",
+      "message": "Command execution detected",
+      "fix": "Use parameterized commands or safer alternatives",
+      "matches": [
+        "execSync("
+      ],
+      "file": "products\\receipt-tracker\\build-client-package.mjs",
+      "ruleName": "No Insecure Functions"
+    },
+    {
+      "rule": "SEC-002",
+      "severity": "HIGH",
+      "message": "Command execution detected",
+      "fix": "Use parameterized commands or safer alternatives",
+      "matches": [
+        "execSync("
+      ],
+      "file": "products\\receipt-tracker\\delivery-script.mjs",
+      "ruleName": "No Insecure Functions"
+    },
+    {
+      "rule": "SEC-002",
+      "severity": "HIGH",
+      "message": "Command execution detected",
+      "fix": "Use parameterized commands or safer alternatives",
+      "matches": [
+        "exec(",
+        "exec(",
+        "exec("
+      ],
+      "file": "products\\receipt-tracker-saas\\server.mjs",
+      "ruleName": "No Insecure Functions"
+    },
+    {
+      "rule": "SEC-002",
+      "severity": "MEDIUM",
+      "message": "User input used without validation",
+      "fix": "Validate all user inputs before use",
+      "matches": [
+        "req.body",
+        "req.body",
+        "req.body"
+      ],
+      "file": "products\\receipt-tracker-saas\\server.mjs",
+      "ruleName": "No Insecure Functions"
+    },
+    {
+      "rule": "SEC-004",
+      "severity": "HIGH",
+      "message": "User input used without adequate validation",
+      "fix": "Add input validation before using user data",
+      "file": "products\\receipt-tracker-saas\\server.mjs",
+      "ruleName": "Input Validation"
+    },
+    {
+      "rule": "SEC-002",
+      "severity": "HIGH",
+      "message": "Command execution detected",
+      "fix": "Use parameterized commands or safer alternatives",
+      "matches": [
+        "exec("
+      ],
+      "file": "prompt-pack-cli\\cli.js",
+      "ruleName": "No Insecure Functions"
+    },
+    {
+      "rule": "SEC-002",
+      "severity": "MEDIUM",
+      "message": "Insecure HTTP instead of HTTPS",
+      "fix": "Use HTTPS for all external connections",
+      "matches": [
+        "http://",
+        "http://"
+      ],
+      "file": "queue.md",
+      "ruleName": "No Insecure Functions"
+    },
+    {
+      "rule": "SEC-003",
+      "severity": "MEDIUM",
+      "message": "Async functions without adequate error handling",
+      "fix": "Add try/catch blocks to all async operations",
+      "file": "script.js",
+      "ruleName": "Error Handling"
+    },
+    {
+      "rule": "SEC-002",
+      "severity": "HIGH",
+      "message": "Command execution detected",
+      "fix": "Use parameterized commands or safer alternatives",
+      "matches": [
+        "execSync("
+      ],
+      "file": "scripts\\auto-twitter-poster.mjs",
+      "ruleName": "No Insecure Functions"
+    },
+    {
+      "rule": "SEC-001",
+      "severity": "CRITICAL",
+      "message": "Telegram bot token detected",
+      "matches": [
+        "8168630761:AAGYDg-1p-wr64U7_u30NWqlep8X5_gr2fY"
+      ],
+      "file": "scripts\\copy-monitor.mjs",
+      "ruleName": "No Hardcoded Secrets"
+    },
+    {
+      "rule": "SEC-001",
+      "severity": "HIGH",
+      "message": "Ethereum wallet address detected",
+      "matches": [
+        "0xdb7cc8d3b4bfb4365f59f0f66cd8a84b74b29a5c",
+        "0x532373DBE4236227324807AF563ca48ce1e30D64"
+      ],
+      "file": "scripts\\copy-monitor.mjs",
+      "ruleName": "No Hardcoded Secrets"
+    },
+    {
+      "rule": "SEC-003",
+      "severity": "MEDIUM",
+      "message": "Async functions without adequate error handling",
+      "fix": "Add try/catch blocks to all async operations",
+      "file": "scripts\\copy-monitor.mjs",
+      "ruleName": "Error Handling"
+    },
+    {
+      "rule": "SEC-001",
+      "severity": "HIGH",
+      "message": "Ethereum wallet address detected",
+      "matches": [
+        "0xa2d0ba285e6fa9662afc709df2272661dc34c947"
+      ],
+      "file": "scripts\\copy-trade-check.mjs",
+      "ruleName": "No Hardcoded Secrets"
+    },
+    {
+      "rule": "SEC-002",
+      "severity": "HIGH",
+      "message": "Command execution detected",
+      "fix": "Use parameterized commands or safer alternatives",
+      "matches": [
+        "execSync("
+      ],
+      "file": "scripts\\copy-trade-check.mjs",
+      "ruleName": "No Insecure Functions"
+    },
+    {
+      "rule": "SEC-001",
+      "severity": "CRITICAL",
+      "message": "Telegram bot token detected",
+      "matches": [
+        "8168630761:AAG5yWkTQxgzqYnLlE40OTmqcOg6uOyUsiE"
+      ],
+      "file": "scripts\\cron-crypto-alert.mjs",
+      "ruleName": "No Hardcoded Secrets"
+    },
+    {
+      "rule": "SEC-001",
+      "severity": "CRITICAL",
+      "message": "Telegram bot token detected",
+      "matches": [
+        "8168630761:AAG5yWkTQxgzqYnLlE40OTmqcOg6uOyUsiE"
+      ],
+      "file": "scripts\\cron-morning-briefing.mjs",
+      "ruleName": "No Hardcoded Secrets"
+    },
+    {
+      "rule": "SEC-001",
+      "severity": "CRITICAL",
+      "message": "Telegram bot token detected",
+      "matches": [
+        "8168630761:AAG5yWkTQxgzqYnLlE40OTmqcOg6uOyUsiE"
+      ],
+      "file": "scripts\\cron-task-check.mjs",
+      "ruleName": "No Hardcoded Secrets"
+    },
+    {
+      "rule": "SEC-001",
+      "severity": "CRITICAL",
+      "message": "Telegram bot token detected",
+      "matches": [
+        "8168630761:AAGYDg-1p-wr64U7_u30NWqlep8X5_gr2fY"
+      ],
+      "file": "scripts\\cron-trader-monitor.mjs",
+      "ruleName": "No Hardcoded Secrets"
+    },
+    {
+      "rule": "SEC-001",
+      "severity": "CRITICAL",
+      "message": "Telegram bot token detected",
+      "matches": [
+        "8168630761:AAGYDg-1p-wr64U7_u30NWqlep8X5_gr2fY"
+      ],
+      "file": "scripts\\habit-reminder.mjs",
+      "ruleName": "No Hardcoded Secrets"
+    },
+    {
+      "rule": "SEC-002",
+      "severity": "HIGH",
+      "message": "Command execution detected",
+      "fix": "Use parameterized commands or safer alternatives",
+      "matches": [
+        "exec(",
+        "exec(",
+        "exec("
+      ],
+      "file": "scripts\\memory-compactor.mjs",
+      "ruleName": "No Insecure Functions"
+    },
+    {
+      "rule": "SEC-001",
+      "severity": "CRITICAL",
+      "message": "Telegram bot token detected",
+      "matches": [
+        "8168630761:AAGYDg-1p-wr64U7_u30NWqlep8X5_gr2fY"
+      ],
+      "file": "scripts\\morning-briefing-telegram.mjs",
+      "ruleName": "No Hardcoded Secrets"
+    },
+    {
+      "rule": "SEC-002",
+      "severity": "HIGH",
+      "message": "Command execution detected",
+      "fix": "Use parameterized commands or safer alternatives",
+      "matches": [
+        "execSync(",
+        "execSync("
+      ],
+      "file": "scripts\\morning-briefing.mjs",
+      "ruleName": "No Insecure Functions"
+    },
+    {
+      "rule": "SEC-002",
+      "severity": "MEDIUM",
+      "message": "Debug mode enabled",
+      "fix": "Disable debug mode in production",
+      "matches": [
+        "DEBUG=true",
+        "DEBUG=true",
+        "DEBUG=true"
+      ],
+      "file": "scripts\\optimizer-phase2-strip-bloat.mjs",
+      "ruleName": "No Insecure Functions"
+    },
+    {
+      "rule": "SEC-002",
+      "severity": "MEDIUM",
+      "message": "Debug mode enabled",
+      "fix": "Disable debug mode in production",
+      "matches": [
+        "DEBUG=true",
+        "DEBUG=true"
+      ],
+      "file": "scripts\\optimizer-phase3-complete.mjs",
+      "ruleName": "No Insecure Functions"
+    },
+    {
+      "rule": "SEC-002",
+      "severity": "HIGH",
+      "message": "Command execution detected",
+      "fix": "Use parameterized commands or safer alternatives",
+      "matches": [
+        "execSync(",
+        "execSync(",
+        "execSync("
+      ],
+      "file": "scripts\\self-healing.mjs",
+      "ruleName": "No Insecure Functions"
+    },
+    {
+      "rule": "SEC-001",
+      "severity": "CRITICAL",
+      "message": "Telegram bot token detected",
+      "matches": [
+        "8168630761:AAGYDg-1p-wr64U7_u30NWqlep8X5_gr2fY"
+      ],
+      "file": "scripts\\send-telegram.mjs",
+      "ruleName": "No Hardcoded Secrets"
+    },
+    {
+      "rule": "SEC-002",
+      "severity": "MEDIUM",
+      "message": "Debug mode enabled",
+      "fix": "Disable debug mode in production",
+      "matches": [
+        "DEBUG=true"
+      ],
+      "file": "scripts\\utils\\logger.mjs",
+      "ruleName": "No Insecure Functions"
+    },
+    {
+      "rule": "SEC-002",
+      "severity": "HIGH",
+      "message": "Command execution detected",
+      "fix": "Use parameterized commands or safer alternatives",
+      "matches": [
+        "execSync(",
+        "execSync("
+      ],
+      "file": "scripts\\video-analyzer.mjs",
+      "ruleName": "No Insecure Functions"
+    },
+    {
+      "rule": "SEC-001",
+      "severity": "CRITICAL",
+      "message": "Telegram bot token detected",
+      "matches": [
+        "8168630761:AAG5yWkTQxgzqYnLlE40OTmqcOg6uOyUsiE"
+      ],
+      "file": "scripts\\x-automation-run.mjs",
+      "ruleName": "No Hardcoded Secrets"
+    },
+    {
+      "rule": "SEC-002",
+      "severity": "HIGH",
+      "message": "Command execution detected",
+      "fix": "Use parameterized commands or safer alternatives",
+      "matches": [
+        "execSync("
+      ],
+      "file": "scripts\\x-automation-run.mjs",
+      "ruleName": "No Insecure Functions"
+    },
+    {
+      "rule": "SEC-002",
+      "severity": "HIGH",
+      "message": "Command execution detected",
+      "fix": "Use parameterized commands or safer alternatives",
+      "matches": [
+        "execSync(",
+        "execSync(",
+        "execSync("
+      ],
+      "file": "scripts\\youtube-analyzer.mjs",
+      "ruleName": "No Insecure Functions"
+    },
+    {
+      "rule": "SEC-001",
+      "severity": "CRITICAL",
+      "message": "Telegram bot token detected",
+      "matches": [
+        "8168630761:AAG5yWkTQxgzqYnLlE40OTmqcOg6uOyUsiE"
+      ],
+      "file": "scripts\\youtube-channel-monitor.mjs",
+      "ruleName": "No Hardcoded Secrets"
+    },
+    {
+      "rule": "SEC-002",
+      "severity": "HIGH",
+      "message": "Command execution detected",
+      "fix": "Use parameterized commands or safer alternatives",
+      "matches": [
+        "execSync(",
+        "execSync(",
+        "execSync("
+      ],
+      "file": "scripts\\youtube-channel-monitor.mjs",
+      "ruleName": "No Insecure Functions"
+    },
+    {
+      "rule": "SEC-003",
+      "severity": "MEDIUM",
+      "message": "Async functions without adequate error handling",
+      "fix": "Add try/catch blocks to all async operations",
+      "file": "security\\day3-prompt-injection-defense.mjs",
+      "ruleName": "Error Handling"
+    },
+    {
+      "rule": "SEC-001",
+      "severity": "CRITICAL",
+      "message": "Hardcoded API key detected",
+      "matches": [
+        "apiKey = 'sk-abc123def456ghi789'"
+      ],
+      "file": "security\\day4-secure-coding.mjs",
+      "ruleName": "No Hardcoded Secrets"
+    },
+    {
+      "rule": "SEC-001",
+      "severity": "CRITICAL",
+      "message": "Hardcoded token detected",
+      "matches": [
+        "token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9'"
+      ],
+      "file": "security\\day4-secure-coding.mjs",
+      "ruleName": "No Hardcoded Secrets"
+    },
+    {
+      "rule": "SEC-001",
+      "severity": "HIGH",
+      "message": "Hardcoded password detected",
+      "matches": [
+        "password = 'superSecret123'"
+      ],
+      "file": "security\\day4-secure-coding.mjs",
+      "ruleName": "No Hardcoded Secrets"
+    },
+    {
+      "rule": "SEC-001",
+      "severity": "CRITICAL",
+      "message": "Telegram bot token detected",
+      "matches": [
+        "8168630761:AAG5yWkTQxgzqYnLlE40OTmqcOg6uOyUsiE"
+      ],
+      "file": "security\\day4-secure-coding.mjs",
+      "ruleName": "No Hardcoded Secrets"
+    },
+    {
+      "rule": "SEC-002",
+      "severity": "CRITICAL",
+      "message": "Dangerous eval() usage",
+      "fix": "Use JSON.parse() or a safer alternative",
+      "matches": [
+        "eval(",
+        "eval(",
+        "eval("
+      ],
+      "file": "security\\day4-secure-coding.mjs",
+      "ruleName": "No Insecure Functions"
+    },
+    {
+      "rule": "SEC-002",
+      "severity": "HIGH",
+      "message": "Command execution detected",
+      "fix": "Use parameterized commands or safer alternatives",
+      "matches": [
+        "exec("
+      ],
+      "file": "security\\day4-secure-coding.mjs",
+      "ruleName": "No Insecure Functions"
+    },
+    {
+      "rule": "SEC-002",
+      "severity": "MEDIUM",
+      "message": "Insecure HTTP instead of HTTPS",
+      "fix": "Use HTTPS for all external connections",
+      "matches": [
+        "http://",
+        "http://"
+      ],
+      "file": "security\\day4-secure-coding.mjs",
+      "ruleName": "No Insecure Functions"
+    },
+    {
+      "rule": "SEC-002",
+      "severity": "HIGH",
+      "message": "SSL verification disabled",
+      "fix": "Never disable SSL verification in production",
+      "matches": [
+        "rejectUnauthorized: false"
+      ],
+      "file": "security\\day4-secure-coding.mjs",
+      "ruleName": "No Insecure Functions"
+    },
+    {
+      "rule": "SEC-003",
+      "severity": "MEDIUM",
+      "message": "Async functions without adequate error handling",
+      "fix": "Add try/catch blocks to all async operations",
+      "file": "services\\automation-scripts\\examples\\email-attachments.js",
+      "ruleName": "Error Handling"
+    },
+    {
+      "rule": "SEC-001",
+      "severity": "HIGH",
+      "message": "Ethereum wallet address detected",
+      "matches": [
+        "0x4e994df8b394c9aa17fe2e03e97ae6b37aa80aa1",
+        "0x4e994df8b394c9aa17fe2e03e97ae6b37aa80aa1"
+      ],
+      "file": "skills\\coinpilot-hyperliquid-copy-trade\\monitor-alternative.mjs",
+      "ruleName": "No Hardcoded Secrets"
+    },
+    {
+      "rule": "SEC-003",
+      "severity": "MEDIUM",
+      "message": "Async functions without adequate error handling",
+      "fix": "Add try/catch blocks to all async operations",
+      "file": "skills\\coinpilot-hyperliquid-copy-trade\\scripts\\coinpilot_cli.mjs",
+      "ruleName": "Error Handling"
+    },
+    {
+      "rule": "SEC-001",
+      "severity": "HIGH",
+      "message": "Ethereum wallet address detected",
+      "matches": [
+        "0x013472e1De3620E51ED6285Ea79667Ce8f5673B9"
+      ],
+      "file": "skills\\coinpilot-hyperliquid-copy-trade\\scripts\\conservative-wealth.mjs",
+      "ruleName": "No Hardcoded Secrets"
+    },
+    {
+      "rule": "SEC-002",
+      "severity": "HIGH",
+      "message": "Command execution detected",
+      "fix": "Use parameterized commands or safer alternatives",
+      "matches": [
+        "execSync("
+      ],
+      "file": "skills\\coinpilot-hyperliquid-copy-trade\\scripts\\conservative-wealth.mjs",
+      "ruleName": "No Insecure Functions"
+    },
+    {
+      "rule": "SEC-001",
+      "severity": "HIGH",
+      "message": "Ethereum wallet address detected",
+      "matches": [
+        "0xd9ffc44a03241faafd27a702e0deb00d7b2cfdcf",
+        "0xd9ffc44a03241faafd27a702e0deb00d7b2cfdcf",
+        "0xe540e465f9d20f610757a51ae5a231d89e34ec8e"
+      ],
+      "file": "skills\\coinpilot-hyperliquid-copy-trade\\scripts\\cortex-conservative-engine.mjs",
+      "ruleName": "No Hardcoded Secrets"
+    },
+    {
+      "rule": "SEC-002",
+      "severity": "HIGH",
+      "message": "Command execution detected",
+      "fix": "Use parameterized commands or safer alternatives",
+      "matches": [
+        "execSync("
+      ],
+      "file": "skills\\coinpilot-hyperliquid-copy-trade\\scripts\\cortex-conservative-engine.mjs",
+      "ruleName": "No Insecure Functions"
+    },
+    {
+      "rule": "SEC-002",
+      "severity": "HIGH",
+      "message": "Command execution detected",
+      "fix": "Use parameterized commands or safer alternatives",
+      "matches": [
+        "execSync("
+      ],
+      "file": "skills\\coinpilot-hyperliquid-copy-trade\\scripts\\cortex-trading-system.mjs",
+      "ruleName": "No Insecure Functions"
+    },
+    {
+      "rule": "SEC-001",
+      "severity": "HIGH",
+      "message": "Ethereum wallet address detected",
+      "matches": [
+        "0xa1b6d8efbcb2fb750a84dbc05649fa4968034f04",
+        "0xa2d0ba285e6fa9662afc709df2272661dc34c947",
+        "0xa1b6d8efbcb2fb750a84dbc05649fa4968034f04"
+      ],
+      "file": "skills\\coinpilot-hyperliquid-copy-trade\\scripts\\position-guard.mjs",
+      "ruleName": "No Hardcoded Secrets"
+    },
+    {
+      "rule": "SEC-002",
+      "severity": "HIGH",
+      "message": "Command execution detected",
+      "fix": "Use parameterized commands or safer alternatives",
+      "matches": [
+        "execSync("
+      ],
+      "file": "skills\\coinpilot-hyperliquid-copy-trade\\scripts\\position-guard.mjs",
+      "ruleName": "No Insecure Functions"
+    },
+    {
+      "rule": "SEC-002",
+      "severity": "HIGH",
+      "message": "Command execution detected",
+      "fix": "Use parameterized commands or safer alternatives",
+      "matches": [
+        "execSync("
+      ],
+      "file": "skills\\coinpilot-hyperliquid-copy-trade\\scripts\\practical-scan.mjs",
+      "ruleName": "No Insecure Functions"
+    },
+    {
+      "rule": "SEC-001",
+      "severity": "HIGH",
+      "message": "Ethereum wallet address detected",
+      "matches": [
+        "0xd9ffc44a03241faafd27a702e0deb00d7b2cfdcf"
+      ],
+      "file": "skills\\coinpilot-hyperliquid-copy-trade\\scripts\\smart-starter.mjs",
+      "ruleName": "No Hardcoded Secrets"
+    },
+    {
+      "rule": "SEC-002",
+      "severity": "HIGH",
+      "message": "Command execution detected",
+      "fix": "Use parameterized commands or safer alternatives",
+      "matches": [
+        "execSync("
+      ],
+      "file": "skills\\coinpilot-hyperliquid-copy-trade\\scripts\\smart-starter.mjs",
+      "ruleName": "No Insecure Functions"
+    },
+    {
+      "rule": "SEC-001",
+      "severity": "HIGH",
+      "message": "Ethereum wallet address detected",
+      "matches": [
+        "0xa1b6d8efbcb2fb750a84dbc05649fa4968034f04"
+      ],
+      "file": "skills\\coinpilot-hyperliquid-copy-trade\\scripts\\test-output.mjs",
+      "ruleName": "No Hardcoded Secrets"
+    },
+    {
+      "rule": "SEC-002",
+      "severity": "HIGH",
+      "message": "Command execution detected",
+      "fix": "Use parameterized commands or safer alternatives",
+      "matches": [
+        "execSync("
+      ],
+      "file": "skills\\coinpilot-hyperliquid-copy-trade\\scripts\\test-output.mjs",
+      "ruleName": "No Insecure Functions"
+    },
+    {
+      "rule": "SEC-001",
+      "severity": "HIGH",
+      "message": "Ethereum wallet address detected",
+      "matches": [
+        "0x0000000000000000000000000000000000000000"
+      ],
+      "file": "skills\\coinpilot-hyperliquid-copy-trade\\scripts\\transfer-usdc.mjs",
+      "ruleName": "No Hardcoded Secrets"
+    },
+    {
+      "rule": "SEC-002",
+      "severity": "HIGH",
+      "message": "Command execution detected",
+      "fix": "Use parameterized commands or safer alternatives",
+      "matches": [
+        "execSync("
+      ],
+      "file": "skills\\cortex-insights\\scripts\\analyze.mjs",
+      "ruleName": "No Insecure Functions"
+    },
+    {
+      "rule": "SEC-003",
+      "severity": "MEDIUM",
+      "message": "Async functions without adequate error handling",
+      "fix": "Add try/catch blocks to all async operations",
+      "file": "skills\\cortex-trader\\advanced-auto-trader.mjs",
+      "ruleName": "Error Handling"
+    },
+    {
+      "rule": "SEC-001",
+      "severity": "HIGH",
+      "message": "Ethereum wallet address detected",
+      "matches": [
+        "0x742d35Cc6634C0532925a3b8D8e0D9b4C5F3e2a1",
+        "0x8ba9f8e4c3d2a1b0e9f8d7c6b5a4938271605d4e"
+      ],
+      "file": "skills\\cortex-trader\\advanced-strategies.mjs",
+      "ruleName": "No Hardcoded Secrets"
+    },
+    {
+      "rule": "SEC-003",
+      "severity": "MEDIUM",
+      "message": "Async functions without adequate error handling",
+      "fix": "Add try/catch blocks to all async operations",
+      "file": "skills\\cortex-trader\\auto-trader.mjs",
+      "ruleName": "Error Handling"
+    },
+    {
+      "rule": "SEC-003",
+      "severity": "MEDIUM",
+      "message": "Async functions without adequate error handling",
+      "fix": "Add try/catch blocks to all async operations",
+      "file": "skills\\cortex-trader\\daily-trading.mjs",
+      "ruleName": "Error Handling"
+    },
+    {
+      "rule": "SEC-001",
+      "severity": "HIGH",
+      "message": "Ethereum wallet address detected",
+      "matches": [
+        "0x90b5dafd78a190d63602d7a12f9ea1336c5df92b",
+        "0x90b5dafd78a190d63602d7a12f9ea1336c5df92b"
+      ],
+      "file": "skills\\cortex-trader\\data\\wallet-v2.json",
+      "ruleName": "No Hardcoded Secrets"
+    },
+    {
+      "rule": "SEC-001",
+      "severity": "HIGH",
+      "message": "Ethereum wallet address detected",
+      "matches": [
+        "0xcd85ed93daf069dc090be4eb705bf1e2aafa7325"
+      ],
+      "file": "skills\\cortex-trader\\README.md",
+      "ruleName": "No Hardcoded Secrets"
+    },
+    {
+      "rule": "SEC-003",
+      "severity": "MEDIUM",
+      "message": "Async functions without adequate error handling",
+      "fix": "Add try/catch blocks to all async operations",
+      "file": "skills\\cortex-trader\\setup-cron.mjs",
+      "ruleName": "Error Handling"
+    },
+    {
+      "rule": "SEC-001",
+      "severity": "HIGH",
+      "message": "Ethereum wallet address detected",
+      "matches": [
+        "0xcd85ed93daf069dc090be4eb705bf1e2aafa7325",
+        "0xcd85ed93daf069dc090be4eb705bf1e2aafa7325"
+      ],
+      "file": "skills\\cortex-trader\\skills\\cortex-trader\\data\\wallet-v2.json",
+      "ruleName": "No Hardcoded Secrets"
+    },
+    {
+      "rule": "SEC-001",
+      "severity": "HIGH",
+      "message": "Ethereum wallet address detected",
+      "matches": [
+        "0xf311e82fe3d41124e1fabbee92c0c42886185837",
+        "0xf311e82fe3d41124e1fabbee92c0c42886185837"
+      ],
+      "file": "skills\\cortex-trader\\skills\\cortex-trader\\data\\wallet.json",
+      "ruleName": "No Hardcoded Secrets"
+    },
+    {
+      "rule": "SEC-001",
+      "severity": "HIGH",
+      "message": "Ethereum wallet address detected",
+      "matches": [
+        "0x742d35Cc6634C0532925a3b8D8e0D9b4C5F3e2a1",
+        "0x8ba9f8e4c3d2a1b0e9f8d7c6b5a4938271605d4e"
+      ],
+      "file": "skills\\cortex-trader\\whale-tracker.mjs",
+      "ruleName": "No Hardcoded Secrets"
+    },
+    {
+      "rule": "SEC-003",
+      "severity": "MEDIUM",
+      "message": "Async functions without adequate error handling",
+      "fix": "Add try/catch blocks to all async operations",
+      "file": "skills\\crypto-research\\scanner\\alpha-monitor.mjs",
+      "ruleName": "Error Handling"
+    },
+    {
+      "rule": "SEC-001",
+      "severity": "CRITICAL",
+      "message": "Telegram bot token detected",
+      "matches": [
+        "8168630761:AAG5yWkTQxgzqYnLlE40OTmqcOg6uOyUsiE"
+      ],
+      "file": "skills\\crypto-research\\scanner\\auto-execution.mjs",
+      "ruleName": "No Hardcoded Secrets"
+    },
+    {
+      "rule": "SEC-003",
+      "severity": "MEDIUM",
+      "message": "Async functions without adequate error handling",
+      "fix": "Add try/catch blocks to all async operations",
+      "file": "skills\\crypto-research\\scanner\\binance-api.mjs",
+      "ruleName": "Error Handling"
+    },
+    {
+      "rule": "SEC-003",
+      "severity": "MEDIUM",
+      "message": "Async functions without adequate error handling",
+      "fix": "Add try/catch blocks to all async operations",
+      "file": "skills\\crypto-research\\scanner\\cli-simple.js",
+      "ruleName": "Error Handling"
+    },
+    {
+      "rule": "SEC-003",
+      "severity": "MEDIUM",
+      "message": "Async functions without adequate error handling",
+      "fix": "Add try/catch blocks to all async operations",
+      "file": "skills\\crypto-research\\scanner\\cli.js",
+      "ruleName": "Error Handling"
+    },
+    {
+      "rule": "SEC-002",
+      "severity": "HIGH",
+      "message": "Command execution detected",
+      "fix": "Use parameterized commands or safer alternatives",
+      "matches": [
+        "execSync("
+      ],
+      "file": "skills\\crypto-research\\scanner\\cortex-integration.mjs",
+      "ruleName": "No Insecure Functions"
+    },
+    {
+      "rule": "SEC-003",
+      "severity": "MEDIUM",
+      "message": "Async functions without adequate error handling",
+      "fix": "Add try/catch blocks to all async operations",
+      "file": "skills\\crypto-research\\scanner\\debug-filters.mjs",
+      "ruleName": "Error Handling"
+    },
+    {
+      "rule": "SEC-003",
+      "severity": "MEDIUM",
+      "message": "Async functions without adequate error handling",
+      "fix": "Add try/catch blocks to all async operations",
+      "file": "skills\\crypto-research\\scanner\\debug-scan.mjs",
+      "ruleName": "Error Handling"
+    },
+    {
+      "rule": "SEC-001",
+      "severity": "CRITICAL",
+      "message": "Hardcoded API key detected",
+      "matches": [
+        "API_KEY = '2d9a7256-71fb-4f0d-a7f8-1ac83582106c'"
+      ],
+      "file": "skills\\crypto-research\\scanner\\dip-scanner.mjs",
+      "ruleName": "No Hardcoded Secrets"
+    },
+    {
+      "rule": "SEC-001",
+      "severity": "CRITICAL",
+      "message": "Telegram bot token detected",
+      "matches": [
+        "8168630761:AAGYDg-1p-wr64U7_u30NWqlep8X5_gr2fY"
+      ],
+      "file": "skills\\crypto-research\\scanner\\gem-finder-cron.mjs",
+      "ruleName": "No Hardcoded Secrets"
+    },
+    {
+      "rule": "SEC-001",
+      "severity": "CRITICAL",
+      "message": "Hardcoded API key detected",
+      "matches": [
+        "API_KEY = '2d9a7256-71fb-4f0d-a7f8-1ac83582106c'"
+      ],
+      "file": "skills\\crypto-research\\scanner\\helius-scanner.mjs",
+      "ruleName": "No Hardcoded Secrets"
+    },
+    {
+      "rule": "SEC-001",
+      "severity": "CRITICAL",
+      "message": "Hardcoded API key detected",
+      "matches": [
+        "API_KEY = '2d9a7256-71fb-4f0d-a7f8-1ac83582106c'"
+      ],
+      "file": "skills\\crypto-research\\scanner\\hybrid-scanner.mjs",
+      "ruleName": "No Hardcoded Secrets"
+    },
+    {
+      "rule": "SEC-002",
+      "severity": "HIGH",
+      "message": "Command execution detected",
+      "fix": "Use parameterized commands or safer alternatives",
+      "matches": [
+        "execSync("
+      ],
+      "file": "skills\\crypto-research\\scanner\\MASTER-SYSTEM.mjs",
+      "ruleName": "No Insecure Functions"
+    },
+    {
+      "rule": "SEC-003",
+      "severity": "MEDIUM",
+      "message": "Async functions without adequate error handling",
+      "fix": "Add try/catch blocks to all async operations",
+      "file": "skills\\crypto-research\\scanner\\ml-predictor.mjs",
+      "ruleName": "Error Handling"
+    },
+    {
+      "rule": "SEC-003",
+      "severity": "MEDIUM",
+      "message": "Async functions without adequate error handling",
+      "fix": "Add try/catch blocks to all async operations",
+      "file": "skills\\crypto-research\\scanner\\simple-scan.js",
+      "ruleName": "Error Handling"
+    },
+    {
+      "rule": "SEC-001",
+      "severity": "CRITICAL",
+      "message": "Telegram bot token detected",
+      "matches": [
+        "8168630761:AAG5yWkTQxgzqYnLlE40OTmqcOg6uOyUsiE"
+      ],
+      "file": "skills\\crypto-research\\scanner\\telegram-alerts.mjs",
+      "ruleName": "No Hardcoded Secrets"
+    },
+    {
+      "rule": "SEC-003",
+      "severity": "MEDIUM",
+      "message": "Async functions without adequate error handling",
+      "fix": "Add try/catch blocks to all async operations",
+      "file": "skills\\crypto-research\\scanner\\test-fixed.js",
+      "ruleName": "Error Handling"
+    },
+    {
+      "rule": "SEC-001",
+      "severity": "HIGH",
+      "message": "Hardcoded password detected",
+      "matches": [
+        "password: 'YOUR_PASSWORD_HERE'"
+      ],
+      "file": "skills\\receipt-tracker-ai\\build\\secure\\build-dist.mjs",
+      "ruleName": "No Hardcoded Secrets"
+    },
+    {
+      "rule": "SEC-001",
+      "severity": "CRITICAL",
+      "message": "Hardcoded secret detected",
+      "matches": [
+        "secret: 'YOUR_SECRET_HERE'"
+      ],
+      "file": "skills\\receipt-tracker-ai\\build\\secure\\build-dist.mjs",
+      "ruleName": "No Hardcoded Secrets"
+    },
+    {
+      "rule": "SEC-002",
+      "severity": "HIGH",
+      "message": "Command execution detected",
+      "fix": "Use parameterized commands or safer alternatives",
+      "matches": [
+        "execSync(",
+        "execSync("
+      ],
+      "file": "skills\\receipt-tracker-ai\\build\\secure\\build-dist.mjs",
+      "ruleName": "No Insecure Functions"
+    },
+    {
+      "rule": "SEC-002",
+      "severity": "HIGH",
+      "message": "Command execution detected",
+      "fix": "Use parameterized commands or safer alternatives",
+      "matches": [
+        "execSync(",
+        "execSync("
+      ],
+      "file": "skills\\receipt-tracker-ai\\build\\secure\\build.mjs",
+      "ruleName": "No Insecure Functions"
+    },
+    {
+      "rule": "SEC-002",
+      "severity": "HIGH",
+      "message": "Command execution detected",
+      "fix": "Use parameterized commands or safer alternatives",
+      "matches": [
+        "execSync("
+      ],
+      "file": "skills\\receipt-tracker-ai\\build\\secure\\secure-config.mjs",
+      "ruleName": "No Insecure Functions"
+    },
+    {
+      "rule": "SEC-002",
+      "severity": "MEDIUM",
+      "message": "Insecure HTTP instead of HTTPS",
+      "fix": "Use HTTPS for all external connections",
+      "matches": [
+        "http://"
+      ],
+      "file": "skills\\receipt-tracker-ai\\build\\server-secure.mjs",
+      "ruleName": "No Insecure Functions"
+    },
+    {
+      "rule": "SEC-001",
+      "severity": "HIGH",
+      "message": "Hardcoded password detected",
+      "matches": [
+        "password: 'YOUR_PASSWORD_HERE'"
+      ],
+      "file": "skills\\receipt-tracker-ai\\secure\\build-dist.mjs",
+      "ruleName": "No Hardcoded Secrets"
+    },
+    {
+      "rule": "SEC-001",
+      "severity": "CRITICAL",
+      "message": "Hardcoded secret detected",
+      "matches": [
+        "secret: 'YOUR_SECRET_HERE'"
+      ],
+      "file": "skills\\receipt-tracker-ai\\secure\\build-dist.mjs",
+      "ruleName": "No Hardcoded Secrets"
+    },
+    {
+      "rule": "SEC-002",
+      "severity": "HIGH",
+      "message": "Command execution detected",
+      "fix": "Use parameterized commands or safer alternatives",
+      "matches": [
+        "execSync(",
+        "execSync("
+      ],
+      "file": "skills\\receipt-tracker-ai\\secure\\build-dist.mjs",
+      "ruleName": "No Insecure Functions"
+    },
+    {
+      "rule": "SEC-002",
+      "severity": "HIGH",
+      "message": "Command execution detected",
+      "fix": "Use parameterized commands or safer alternatives",
+      "matches": [
+        "execSync(",
+        "execSync("
+      ],
+      "file": "skills\\receipt-tracker-ai\\secure\\build.mjs",
+      "ruleName": "No Insecure Functions"
+    },
+    {
+      "rule": "SEC-002",
+      "severity": "HIGH",
+      "message": "Command execution detected",
+      "fix": "Use parameterized commands or safer alternatives",
+      "matches": [
+        "execSync("
+      ],
+      "file": "skills\\receipt-tracker-ai\\secure\\secure-config.mjs",
+      "ruleName": "No Insecure Functions"
+    },
+    {
+      "rule": "SEC-002",
+      "severity": "MEDIUM",
+      "message": "Insecure HTTP instead of HTTPS",
+      "fix": "Use HTTPS for all external connections",
+      "matches": [
+        "http://"
+      ],
+      "file": "skills\\receipt-tracker-ai\\server-secure.mjs",
+      "ruleName": "No Insecure Functions"
+    },
+    {
+      "rule": "SEC-002",
+      "severity": "HIGH",
+      "message": "Command execution detected",
+      "fix": "Use parameterized commands or safer alternatives",
+      "matches": [
+        "exec("
+      ],
+      "file": "skills\\receipt-tracker-ai\\server-v3.mjs",
+      "ruleName": "No Insecure Functions"
+    },
+    {
+      "rule": "SEC-002",
+      "severity": "MEDIUM",
+      "message": "Insecure HTTP instead of HTTPS",
+      "fix": "Use HTTPS for all external connections",
+      "matches": [
+        "http://"
+      ],
+      "file": "skills\\receipt-tracker-ai\\server-v3.mjs",
+      "ruleName": "No Insecure Functions"
+    },
+    {
+      "rule": "SEC-003",
+      "severity": "MEDIUM",
+      "message": "Async functions without adequate error handling",
+      "fix": "Add try/catch blocks to all async operations",
+      "file": "skills\\receipt-tracker-ai\\test-preprocess.mjs",
+      "ruleName": "Error Handling"
+    },
+    {
+      "rule": "SEC-003",
+      "severity": "MEDIUM",
+      "message": "Async functions without adequate error handling",
+      "fix": "Add try/catch blocks to all async operations",
+      "file": "skills\\receipt-tracker-ai\\test-upload.mjs",
+      "ruleName": "Error Handling"
+    },
+    {
+      "rule": "SEC-003",
+      "severity": "MEDIUM",
+      "message": "Async functions without adequate error handling",
+      "fix": "Add try/catch blocks to all async operations",
+      "file": "skills\\receipt-tracker-ai\\test-vision-debug.mjs",
+      "ruleName": "Error Handling"
+    },
+    {
+      "rule": "SEC-003",
+      "severity": "MEDIUM",
+      "message": "Async functions without adequate error handling",
+      "fix": "Add try/catch blocks to all async operations",
+      "file": "skills\\x-automation\\debug-check.mjs",
+      "ruleName": "Error Handling"
+    },
+    {
+      "rule": "SEC-002",
+      "severity": "HIGH",
+      "message": "Command execution detected",
+      "fix": "Use parameterized commands or safer alternatives",
+      "matches": [
+        "spawn("
+      ],
+      "file": "skills\\x-automation\\launch-chrome.mjs",
+      "ruleName": "No Insecure Functions"
+    },
+    {
+      "rule": "SEC-002",
+      "severity": "HIGH",
+      "message": "Command execution detected",
+      "fix": "Use parameterized commands or safer alternatives",
+      "matches": [
+        "execSync("
+      ],
+      "file": "skills\\x-automation\\scripts\\cron-poster.js",
+      "ruleName": "No Insecure Functions"
+    },
+    {
+      "rule": "SEC-002",
+      "severity": "HIGH",
+      "message": "Command execution detected",
+      "fix": "Use parameterized commands or safer alternatives",
+      "matches": [
+        "execSync("
+      ],
+      "file": "skills\\x-automation\\scripts\\generate-daily-content.js",
+      "ruleName": "No Insecure Functions"
+    },
+    {
+      "rule": "SEC-003",
+      "severity": "MEDIUM",
+      "message": "Async functions without adequate error handling",
+      "fix": "Add try/catch blocks to all async operations",
+      "file": "skills\\x-automation\\scripts\\generate-ideas.js",
+      "ruleName": "Error Handling"
+    },
+    {
+      "rule": "SEC-001",
+      "severity": "HIGH",
+      "message": "Ethereum wallet address detected",
+      "matches": [
+        "0x532373DBE4236227324807AF563ca48ce1e30D64"
+      ],
+      "file": "tasks.md",
+      "ruleName": "No Hardcoded Secrets"
+    },
+    {
+      "rule": "SEC-001",
+      "severity": "CRITICAL",
+      "message": "Telegram bot token detected",
+      "matches": [
+        "8168630761:AAG5yWkTQxgzqYnLlE40OTmqcOg6uOyUsiE"
+      ],
+      "file": "TOOLS.md",
+      "ruleName": "No Hardcoded Secrets"
+    },
+    {
+      "rule": "SEC-001",
+      "severity": "HIGH",
+      "message": "Ethereum wallet address detected",
+      "matches": [
+        "0x013472e1De3620E51ED6285Ea79667Ce8f5673B9",
+        "0x532373DBE4236227324807AF563ca48ce1e30D64",
+        "0xa1b6d8efbcb2fb750a84dbc05649fa4968034f04"
+      ],
+      "file": "TOOLS.md",
+      "ruleName": "No Hardcoded Secrets"
+    },
+    {
+      "rule": "SEC-003",
+      "severity": "MEDIUM",
+      "message": "Async functions without adequate error handling",
+      "fix": "Add try/catch blocks to all async operations",
+      "file": "trading-engine\\orchestrator.mjs",
+      "ruleName": "Error Handling"
+    }
+  ],
+  "timestamp": "2026-05-12T22:03:17.468Z"
+}

@@ -1,0 +1,20 @@
+**[Free] AI Security Assessment for Small Businesses**
+
+Hi r/smallbusiness,
+
+I built a full security stack for my AI system and I'm offering free 30-minute security assessments to help other businesses protect themselves.
+
+**What I check:**
+- Prompt injection vulnerabilities
+- API security gaps
+- Data leak risks
+- Compliance issues
+
+**My credentials:**
+- 24/24 advanced attacks blocked
+- SOC2 Type II compliant
+- 1,830 files scanned, 159 issues fixed
+
+**No catch — just want to build case studies and help businesses.**
+
+DM me or comment if interested.

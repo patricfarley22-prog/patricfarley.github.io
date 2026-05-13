@@ -1,0 +1,85 @@
+{
+  "version": "1.0",
+  "lastUpdated": "2026-05-12T23:37:33.614Z",
+  "rto": "4 hours",
+  "rpo": "1 hour",
+  "scenarios": [
+    {
+      "name": "Data Center Outage",
+      "impact": "COMPLETE",
+      "response": [
+        "Activate secondary region (us-west-2)",
+        "Redirect traffic via Route 53 failover",
+        "Restore from latest backup (max 1 hour data loss)",
+        "Notify stakeholders via PagerDuty",
+        "Validate system health with smoke tests"
+      ],
+      "owner": "Infrastructure Team",
+      "time": "4 hours"
+    },
+    {
+      "name": "Database Corruption",
+      "impact": "HIGH",
+      "response": [
+        "Isolate corrupted instance",
+        "Restore from point-in-time backup",
+        "Verify data integrity with checksums",
+        "Switch application to restored database",
+        "Investigate root cause"
+      ],
+      "owner": "Database Team",
+      "time": "2 hours"
+    },
+    {
+      "name": "Security Breach",
+      "impact": "CRITICAL",
+      "response": [
+        "Activate incident response team",
+        "Isolate affected systems",
+        "Preserve forensic evidence",
+        "Revoke compromised credentials",
+        "Patch vulnerability",
+        "Conduct post-incident review"
+      ],
+      "owner": "Security Team",
+      "time": "1 hour initial, 24 hours full"
+    },
+    {
+      "name": "Ransomware Attack",
+      "impact": "CRITICAL",
+      "response": [
+        "DO NOT PAY RANSOM",
+        "Isolate all affected systems",
+        "Restore from offline backup",
+        "Rebuild compromised infrastructure",
+        "Report to law enforcement",
+        "Implement additional controls"
+      ],
+      "owner": "Security + Infrastructure",
+      "time": "12 hours"
+    }
+  ],
+  "backupStrategy": {
+    "frequency": "Hourly",
+    "retention": "30 days",
+    "encryption": "AES-256-GCM",
+    "locations": [
+      "Primary (us-east-1)",
+      "Secondary (us-west-2)",
+      "Offline (Glacier)"
+    ],
+    "testing": "Monthly restore validation"
+  },
+  "communication": {
+    "internal": "Slack #incidents",
+    "external": "Status page + Twitter",
+    "stakeholders": [
+      "CEO",
+      "CTO",
+      "Security",
+      "Legal",
+      "Customers"
+    ],
+    "frequency": "Every 30 minutes during incident"
+  }
+}

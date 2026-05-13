@@ -1,0 +1,20 @@
+Subject: 30-Second AI Security Check
+
+[Name],
+
+Most businesses using ChatGPT/Claude don't realize they're 1 prompt away from a data leak.
+
+I audit AI security for small businesses. Takes 30 minutes. Free.
+
+I just finished hardening my own system:
+✓ 24 advanced attack techniques tested and blocked
+✓ SOC2 compliant documentation
+✓ Cloud-ready deployment configs
+
+Want me to check yours?
+
+Book: [Calendly Link]
+Or reply to this email.
+
+— Patric
+Cortex Security | Grapevine, TX

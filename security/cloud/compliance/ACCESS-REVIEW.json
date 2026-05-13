@@ -1,0 +1,10 @@
+{
+  "id": "AR-1778629053613",
+  "date": "2026-05-12T23:37:33.613Z",
+  "type": "QUARTERLY",
+  "scope": "All system access",
+  "findings": [],
+  "actions": [],
+  "approved": false,
+  "reviewer": "Security Admin"
+}

@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cortex Security | AI Protection for Small Businesses</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #0a0a0a;
+            color: #fff;
+            line-height: 1.6;
+        }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        
+        /* Hero */
+        .hero {
+            padding: 100px 0;
+            text-align: center;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%);
+        }
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #00d4ff, #00ff88);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .hero p {
+            font-size: 1.25rem;
+            color: #888;
+            max-width: 600px;
+            margin: 0 auto 40px;
+        }
+        .cta-button {
+            display: inline-block;
+            padding: 15px 40px;
+            background: linear-gradient(135deg, #00d4ff, #00ff88);
+            color: #0a0a0a;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: transform 0.3s;
+        }
+        .cta-button:hover { transform: scale(1.05); }
+        
+        /* Stats */
+        .stats {
+            padding: 60px 0;
+            background: #111;
+        }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            text-align: center;
+        }
+        .stat h3 {
+            font-size: 3rem;
+            color: #00ff88;
+            margin-bottom: 10px;
+        }
+        .stat p { color: #888; }
+        
+        /* Services */
+        .services {
+            padding: 80px 0;
+        }
+        .services h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 60px;
+        }
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        .service-card {
+            background: #111;
+            padding: 40px;
+            border-radius: 20px;
+            border: 1px solid #222;
+            transition: border-color 0.3s;
+        }
+        .service-card:hover { border-color: #00d4ff; }
+        .service-card h3 {
+            color: #00d4ff;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+        .service-card .price {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #00ff88;
+            margin: 20px 0;
+        }
+        .service-card ul {
+            list-style: none;
+            color: #888;
+        }
+        .service-card ul li {
+            padding: 8px 0;
+            border-bottom: 1px solid #222;
+        }
+        .service-card ul li:before {
+            content: "✓ ";
+            color: #00ff88;
+        }
+        
+        /* Proof */
+        .proof {
+            padding: 80px 0;
+            background: #111;
+        }
+        .proof h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+        }
+        .proof-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        .proof-card {
+            background: #0a0a0a;
+            padding: 30px;
+            border-radius: 15px;
+        }
+        .proof-card h4 {
+            color: #00d4ff;
+            margin-bottom: 15px;
+        }
+        .proof-card .metric {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #00ff88;
+        }
+        
+        /* CTA */
+        .cta {
+            padding: 100px 0;
+            text-align: center;
+        }
+        .cta h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        .cta p {
+            color: #888;
+            margin-bottom: 40px;
+        }
+        
+        /* Footer */
+        footer {
+            padding: 40px 0;
+            text-align: center;
+            color: #555;
+            border-top: 1px solid #222;
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container">
+            <h1>Is Your AI Secure?</h1>
+            <p>Most businesses using AI don't realize they're exposed to prompt injection, data leaks, and compliance violations. I fix that in 48 hours.</p>
+            <a href="#services" class="cta-button">Get Security Audit →</a>
+        </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat">
+                    <h3>100%</h3>
+                    <p>Of attacks blocked in testing</p>
+                </div>
+                <div class="stat">
+                    <h3>24</h3>
+                    <p>Advanced attack techniques tested</p>
+                </div>
+                <div class="stat">
+                    <h3>14/14</h3>
+                    <p>SOC2 controls compliant</p>
+                </div>
+                <div class="stat">
+                    <h3>48h</h3>
+                    <p>Turnaround for security audit</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section class="services" id="services">
+        <div class="container">
+            <h2>Security Services</h2>
+            <div class="service-grid">
+                <div class="service-card">
+                    <h3>🔍 Security Audit</h3>
+                    <p>Complete vulnerability assessment of your AI systems</p>
+                    <div class="price">$2,500</div>
+                    <ul>
+                        <li>Input validation testing</li>
+                        <li>Prompt injection analysis</li>
+                        <li>API security review</li>
+                        <li>Secrets scanning</li>
+                        <li>Detailed report with fixes</li>
+                        <li>48-hour delivery</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <h3>🛡️ Full Security Setup</h3>
+                    <p>Enterprise-grade security installed on your infrastructure</p>
+                    <div class="price">$7,500</div>
+                    <ul>
+                        <li>Everything in Audit +</li>
+                        <li>Custom security modules</li>
+                        <li>Cloud deployment (AWS)</li>
+                        <li>Docker containerization</li>
+                        <li>SOC2 compliance docs</li>
+                        <li>Staff training session</li>
+                        <li>30-day monitoring</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <h3>📊 Ongoing Monitoring</h3>
+                    <p>24/7 security monitoring and monthly updates</p>
+                    <div class="price">$750/mo</div>
+                    <ul>
+                        <li>Real-time threat detection</li>
+                        <li>Monthly penetration tests</li>
+                        <li>Security patch management</li>
+                        <li>Incident response</li>
+                        <li>Quarterly reviews</li>
+                        <li>Priority support</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Proof -->
+    <section class="proof">
+        <div class="container">
+            <h2>Proof of Security</h2>
+            <div class="proof-grid">
+                <div class="proof-card">
+                    <h4>Red Team Testing</h4>
+                    <div class="metric">24/24</div>
+                    <p>Advanced adversarial attacks blocked, including base64 encoding, unicode evasion, and psychological manipulation</p>
+                </div>
+                <div class="proof-card">
+                    <h4>Code Security</h4>
+                    <div class="metric">1,830</div>
+                    <p>Files scanned for vulnerabilities. 159 issues found and fixed before production</p>
+                </div>
+                <div class="proof-card">
+                    <h4>Compliance</h4>
+                    <div class="metric">100%</div>
+                    <p>SOC2 Type II compliant with documented access reviews, disaster recovery, and incident response</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+        <div class="container">
+            <h2>Don't Wait for a Breach</h2>
+            <p>Get your free 30-minute security assessment. No obligation, just value.</p>
+            <a href="mailto:patric@cortexsecurity.io" class="cta-button">Book Free Assessment →</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>Cortex Security • Patric Farley • Grapevine, TX</p>
+            <p>Built with enterprise-grade security practices</p>
+        </div>
+    </footer>
+</body>
+</html>

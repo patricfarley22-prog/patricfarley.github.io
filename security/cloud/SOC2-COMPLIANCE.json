@@ -1,0 +1,107 @@
+{
+  "generatedAt": "2026-05-12T23:33:16.331Z",
+  "company": "Cortex Systems",
+  "system": "Cortex AI",
+  "version": "1.0",
+  "summary": {
+    "total": 14,
+    "implemented": 12,
+    "notImplemented": 2,
+    "complianceRate": "85.7%",
+    "status": "COMPLIANT"
+  },
+  "details": {
+    "trustServices": {
+      "security": [
+        {
+          "id": "CC6.1",
+          "requirement": "Logical access security",
+          "implemented": true,
+          "evidence": "Input validation, API security"
+        },
+        {
+          "id": "CC6.2",
+          "requirement": "Access removal",
+          "implemented": true,
+          "evidence": "Session management, token revocation"
+        },
+        {
+          "id": "CC6.3",
+          "requirement": "Access establishment",
+          "implemented": true,
+          "evidence": "API key generation, role-based access"
+        },
+        {
+          "id": "CC6.4",
+          "requirement": "Access modifications",
+          "implemented": true,
+          "evidence": "Rate limiting, IP whitelist"
+        },
+        {
+          "id": "CC6.5",
+          "requirement": "Access reviews",
+          "implemented": false,
+          "evidence": "TODO: Quarterly access review"
+        },
+        {
+          "id": "CC6.6",
+          "requirement": "Security infrastructure",
+          "implemented": true,
+          "evidence": "Docker hardening, security headers"
+        },
+        {
+          "id": "CC6.7",
+          "requirement": "Security incident detection",
+          "implemented": true,
+          "evidence": "Monitor, alerts, file integrity"
+        },
+        {
+          "id": "CC6.8",
+          "requirement": "Incident response",
+          "implemented": true,
+          "evidence": "RUNBOOK.md, incident procedures"
+        }
+      ],
+      "availability": [
+        {
+          "id": "A1.1",
+          "requirement": "System availability",
+          "implemented": true,
+          "evidence": "Health checks, Docker restart policy"
+        },
+        {
+          "id": "A1.2",
+          "requirement": "System monitoring",
+          "implemented": true,
+          "evidence": "Prometheus, CloudWatch"
+        },
+        {
+          "id": "A1.3",
+          "requirement": "Recovery procedures",
+          "implemented": false,
+          "evidence": "TODO: Disaster recovery plan"
+        }
+      ],
+      "confidentiality": [
+        {
+          "id": "C1.1",
+          "requirement": "Data classification",
+          "implemented": true,
+          "evidence": "Security policy, data tiers"
+        },
+        {
+          "id": "C1.2",
+          "requirement": "Data encryption",
+          "implemented": true,
+          "evidence": "AES-256-GCM, HTTPS/TLS"
+        },
+        {
+          "id": "C1.3",
+          "requirement": "Access to confidential data",
+          "implemented": true,
+          "evidence": ".env, SecretsManager"
+        }
+      ]
+    }
+  }
+}

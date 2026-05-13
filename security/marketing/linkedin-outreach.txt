@@ -1,0 +1,15 @@
+Subject: AI Security Question
+
+Hi [Name],
+
+I noticed [Company] is using AI tools. Quick question — have you had your AI systems security audited?
+
+I recently completed a full security stack for my own AI (24/24 advanced attacks blocked, SOC2 compliant) and I'm offering free 30-minute security assessments to small businesses in the DFW area.
+
+No obligation — just want to help businesses protect themselves from prompt injection, data leaks, and compliance issues.
+
+Worth a quick chat?
+
+Best,
+Patric Farley
+Cortex Security

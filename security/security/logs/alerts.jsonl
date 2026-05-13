@@ -1,0 +1,4 @@
+{"id":"51c21707-4e1f-49e4-ac68-3238eddf5e30","type":"RATE_LIMIT_EXCEEDED","severity":"HIGH","timestamp":"2026-05-12T22:41:06.069Z","details":{"allowed":false,"checks":{"rateLimit":{"blocked":true}}},"acknowledged":false}
+{"id":"3f3c7b7e-7640-44b0-bc18-47a3ec0e09cf","type":"CRITICAL_INJECTION","severity":"CRITICAL","timestamp":"2026-05-12T22:41:06.069Z","details":{"isValid":false,"riskLevel":"CRITICAL","riskScore":95},"acknowledged":false}
+{"id":"95003ff8-66e7-430d-bb9f-57e4931aa5e9","type":"CRITICAL_INJECTION","severity":"CRITICAL","timestamp":"2026-05-12T22:42:53.067Z","details":{"isValid":false,"riskLevel":"CRITICAL","riskScore":95},"acknowledged":false}
+{"id":"33837b39-42c8-4739-bbd7-4c35718963f0","type":"RATE_LIMIT_EXCEEDED","severity":"HIGH","timestamp":"2026-05-12T22:42:53.067Z","details":{"allowed":false,"checks":{"rateLimit":{"blocked":true}}},"acknowledged":false}
