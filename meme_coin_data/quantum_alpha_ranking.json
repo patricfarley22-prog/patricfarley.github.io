@@ -1,0 +1,445 @@
+{
+  "timestamp": "2026-05-15T18:41:29.519944",
+  "ranking": [
+    {
+      "coin": {
+        "symbol": "CGPT",
+        "name": "ChainGPT",
+        "market_cap": 39711525,
+        "price": 0.04297103,
+        "volume_24h": 38119780,
+        "change_24h": 16.09589,
+        "change_7d": 0,
+        "circulating_supply": 926000377.0,
+        "total_supply": 997766421.0,
+        "ath": 0.555799,
+        "ath_change": -92.33094,
+        "id": "chaingpt",
+        "volume_mcap_ratio": 95.99173036039286,
+        "scores": {
+          "volume": 100,
+          "momentum": 66.09589,
+          "trend": 40,
+          "recovery": 46.16547,
+          "size": 70,
+          "social": 80.0,
+          "dev": 20
+        },
+        "total_score": 67.1439985,
+        "quantum_confidence": 0.6714399849999999,
+        "quantum_signal": "HOLD"
+      },
+      "total_score": 67.1439985,
+      "quantum_confidence": 0.53725,
+      "quantum_signal": "HOLD",
+      "quantum_expvals": [
+        0.086,
+        0.336,
+        -0.11,
+        -0.014
+      ],
+      "quantum_features": [
+        0.39711525,
+        0.9599173036039287,
+        0.6609589,
+        0.5
+      ]
+    },
+    {
+      "coin": {
+        "symbol": "UP",
+        "name": "Superform",
+        "market_cap": 28460749,
+        "price": 0.148329,
+        "volume_24h": 21543781,
+        "change_24h": -12.81111,
+        "change_7d": 0,
+        "circulating_supply": 191876715.0,
+        "total_supply": 1000000000.0,
+        "ath": 0.276468,
+        "ath_change": -45.92174,
+        "id": "superform",
+        "volume_mcap_ratio": 75.69646533195595,
+        "scores": {
+          "volume": 100,
+          "momentum": 42.81111,
+          "trend": 80,
+          "recovery": 30,
+          "size": 70,
+          "social": 80.0,
+          "dev": 40
+        },
+        "total_score": 67.062222,
+        "quantum_confidence": 0.67062222,
+        "quantum_signal": "HOLD"
+      },
+      "total_score": 67.062222,
+      "quantum_confidence": 0.57725,
+      "quantum_signal": "BUY",
+      "quantum_expvals": [
+        0.388,
+        0.312,
+        -0.112,
+        0.03
+      ],
+      "quantum_features": [
+        0.28460749,
+        0.7569646533195595,
+        0.3718889,
+        0.5
+      ]
+    },
+    {
+      "coin": {
+        "symbol": "ZBT",
+        "name": "ZEROBASE",
+        "market_cap": 38451201,
+        "price": 0.156736,
+        "volume_24h": 28487723,
+        "change_24h": 6.93505,
+        "change_7d": 0,
+        "circulating_supply": 244992188.30119348,
+        "total_supply": 1000000000.0,
+        "ath": 1.025,
+        "ath_change": -84.74909,
+        "id": "zerobase",
+        "volume_mcap_ratio": 74.08799272615698,
+        "scores": {
+          "volume": 100,
+          "momentum": 56.935050000000004,
+          "trend": 40,
+          "recovery": 42.374545,
+          "size": 70,
+          "social": 80.0,
+          "dev": 40
+        },
+        "total_score": 65.74319175,
+        "quantum_confidence": 0.6574319175,
+        "quantum_signal": "HOLD"
+      },
+      "total_score": 65.74319175,
+      "quantum_confidence": 0.534,
+      "quantum_signal": "HOLD",
+      "quantum_expvals": [
+        0.102,
+        0.132,
+        0.044,
+        -0.006
+      ],
+      "quantum_features": [
+        0.38451201,
+        0.7408799272615698,
+        0.5693505000000001,
+        0.5
+      ]
+    },
+    {
+      "coin": {
+        "symbol": "OPG",
+        "name": "OpenGradient",
+        "market_cap": 49887871,
+        "price": 0.262514,
+        "volume_24h": 29375394,
+        "change_24h": -6.1151,
+        "change_7d": 0,
+        "circulating_supply": 190000000.0,
+        "total_supply": 1000000000.0,
+        "ath": 0.475875,
+        "ath_change": -44.8454,
+        "id": "opengradient",
+        "volume_mcap_ratio": 58.88283747366169,
+        "scores": {
+          "volume": 100,
+          "momentum": 36.1151,
+          "trend": 80,
+          "recovery": 30,
+          "size": 70,
+          "social": 80.0,
+          "dev": 40
+        },
+        "total_score": 65.72302,
+        "quantum_confidence": 0.6572302000000001,
+        "quantum_signal": "HOLD"
+      },
+      "total_score": 65.72302,
+      "quantum_confidence": 0.5025,
+      "quantum_signal": "HOLD",
+      "quantum_expvals": [
+        0.01,
+        0.038,
+        -0.038,
+        0.01
+      ],
+      "quantum_features": [
+        0.49887871,
+        0.5888283747366169,
+        0.43884900000000004,
+        0.5
+      ]
+    },
+    {
+      "coin": {
+        "symbol": "DEGEN",
+        "name": "Degen",
+        "market_cap": 35039468,
+        "price": 0.00094388,
+        "volume_24h": 28645555,
+        "change_24h": -10.55131,
+        "change_7d": 0,
+        "circulating_supply": 36965730333.0,
+        "total_supply": 36965730333.0,
+        "ath": 0.064543,
+        "ath_change": -98.52288,
+        "id": "degen-base",
+        "volume_mcap_ratio": 81.75225434358764,
+        "scores": {
+          "volume": 100,
+          "momentum": 40.55131,
+          "trend": 80,
+          "recovery": 20,
+          "size": 70,
+          "social": 80.0,
+          "dev": 40
+        },
+        "total_score": 65.110262,
+        "quantum_confidence": 0.6511026200000001,
+        "quantum_signal": "HOLD"
+      },
+      "total_score": 65.110262,
+      "quantum_confidence": 0.56075,
+      "quantum_signal": "BUY",
+      "quantum_expvals": [
+        0.182,
+        0.314,
+        0.002,
+        -0.012
+      ],
+      "quantum_features": [
+        0.35039468,
+        0.8175225434358764,
+        0.3944869,
+        0.5
+      ]
+    },
+    {
+      "coin": {
+        "symbol": "GIGGLE",
+        "name": "Giggle Fund",
+        "market_cap": 33666085,
+        "price": 33.62,
+        "volume_24h": 14720966,
+        "change_24h": -3.336,
+        "change_7d": 0,
+        "circulating_supply": 1000000.0,
+        "total_supply": 1000000.0,
+        "ath": 274.54,
+        "ath_change": -87.71577,
+        "id": "giggle-fund",
+        "volume_mcap_ratio": 43.72639705507783,
+        "scores": {
+          "volume": 87.45279411015566,
+          "momentum": 33.336,
+          "trend": 80,
+          "recovery": 43.857885,
+          "size": 70,
+          "social": 69.96223528812453,
+          "dev": 60
+        },
+        "total_score": 64.10530480635137,
+        "quantum_confidence": 0.6410530480635137,
+        "quantum_signal": "HOLD"
+      },
+      "total_score": 64.10530480635137,
+      "quantum_confidence": 0.53625,
+      "quantum_signal": "HOLD",
+      "quantum_expvals": [
+        0.25,
+        0.024,
+        -0.03,
+        0.046
+      ],
+      "quantum_features": [
+        0.33666085,
+        0.4372639705507783,
+        0.46664,
+        0.5
+      ]
+    },
+    {
+      "coin": {
+        "symbol": "DOGS",
+        "name": "Dogs",
+        "market_cap": 29934618,
+        "price": 5.795e-05,
+        "volume_24h": 19033746,
+        "change_24h": -5.51799,
+        "change_7d": 0,
+        "circulating_supply": 516750000000.0,
+        "total_supply": 550000000000.0,
+        "ath": 0.00163299,
+        "ath_change": -96.46305,
+        "id": "dogs-2",
+        "volume_mcap_ratio": 63.58439583227686,
+        "scores": {
+          "volume": 100,
+          "momentum": 35.51799,
+          "trend": 80,
+          "recovery": 20,
+          "size": 70,
+          "social": 80.0,
+          "dev": 40
+        },
+        "total_score": 64.103598,
+        "quantum_confidence": 0.6410359800000001,
+        "quantum_signal": "HOLD"
+      },
+      "total_score": 64.103598,
+      "quantum_confidence": 0.56225,
+      "quantum_signal": "BUY",
+      "quantum_expvals": [
+        0.364,
+        0.12,
+        -0.028,
+        0.042
+      ],
+      "quantum_features": [
+        0.29934618,
+        0.6358439583227686,
+        0.44482010000000005,
+        0.5
+      ]
+    },
+    {
+      "coin": {
+        "symbol": "POLYX",
+        "name": "Polymesh",
+        "market_cap": 70214331,
+        "price": 0.055071,
+        "volume_24h": 53581660,
+        "change_24h": 0.45168,
+        "change_7d": 0,
+        "circulating_supply": 1276410545.98061,
+        "total_supply": 1276410545.98061,
+        "ath": 0.748771,
+        "ath_change": -92.67224,
+        "id": "polymesh",
+        "volume_mcap_ratio": 76.3115723483857,
+        "scores": {
+          "volume": 100,
+          "momentum": 50.45168,
+          "trend": 40,
+          "recovery": 46.33612,
+          "size": 50,
+          "social": 80.0,
+          "dev": 60
+        },
+        "total_score": 64.040754,
+        "quantum_confidence": 0.6404075400000001,
+        "quantum_signal": "HOLD"
+      },
+      "total_score": 64.040754,
+      "quantum_confidence": 0.505,
+      "quantum_signal": "HOLD",
+      "quantum_expvals": [
+        0.386,
+        -0.316,
+        -0.036,
+        0.006
+      ],
+      "quantum_features": [
+        0.70214331,
+        0.7631157234838569,
+        0.5045168,
+        0.5
+      ]
+    },
+    {
+      "coin": {
+        "symbol": "SPK",
+        "name": "Spark",
+        "market_cap": 91733667,
+        "price": 0.03408852,
+        "volume_24h": 92671276,
+        "change_24h": 0.12936,
+        "change_7d": 0,
+        "circulating_supply": 2687524405.2969,
+        "total_supply": 10000000000.0,
+        "ath": 0.184472,
+        "ath_change": -81.49317,
+        "id": "spark-2",
+        "volume_mcap_ratio": 101.02209911656534,
+        "scores": {
+          "volume": 100,
+          "momentum": 50.12936,
+          "trend": 40,
+          "recovery": 40.746585,
+          "size": 50,
+          "social": 80.0,
+          "dev": 60
+        },
+        "total_score": 63.13785975,
+        "quantum_confidence": 0.6313785974999999,
+        "quantum_signal": "HOLD"
+      },
+      "total_score": 63.13785975,
+      "quantum_confidence": 0.5005,
+      "quantum_signal": "HOLD",
+      "quantum_expvals": [
+        0.946,
+        -0.966,
+        0.036,
+        -0.012
+      ],
+      "quantum_features": [
+        0.91733667,
+        1.0,
+        0.5012936,
+        0.5
+      ]
+    },
+    {
+      "coin": {
+        "symbol": "PNUT",
+        "name": "Peanut the Squirrel",
+        "market_cap": 61644286,
+        "price": 0.061566,
+        "volume_24h": 31981846,
+        "change_24h": -4.85468,
+        "change_7d": 0,
+        "circulating_supply": 999842182.08811,
+        "total_supply": 999842182.08811,
+        "ath": 2.44,
+        "ath_change": -97.45265,
+        "id": "peanut-the-squirrel",
+        "volume_mcap_ratio": 51.881282232711726,
+        "scores": {
+          "volume": 100,
+          "momentum": 34.85468,
+          "trend": 80,
+          "recovery": 20,
+          "size": 50,
+          "social": 80.0,
+          "dev": 60
+        },
+        "total_score": 62.970936,
+        "quantum_confidence": 0.62970936,
+        "quantum_signal": "HOLD"
+      },
+      "total_score": 62.970936,
+      "quantum_confidence": 0.512,
+      "quantum_signal": "HOLD",
+      "quantum_expvals": [
+        0.15,
+        0.04,
+        -0.068,
+        -0.026
+      ],
+      "quantum_features": [
+        0.61644286,
+        0.5188128223271172,
+        0.4514532,
+        0.5
+      ]
+    }
+  ]
+}
