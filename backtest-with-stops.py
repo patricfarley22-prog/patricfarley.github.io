@@ -262,12 +262,15 @@ class BacktestWithStops:
                     if r['trade_list']:
                         print("  Trades:")
                         for t in r['trade_list'][-3:]:
+                            date_str = t.get('date', f"Day {t.get('day', '?')}")
                             if t['type'] == 'STOP':
-                                print(f"    STOP {t['date']} @ ${t['price']:.8f} | PnL: {t['pnl_pct']:+.1f}% | Hold: {t['hold_days']}d")
+                                print(f"    STOP {date_str} @ ${t['price']:.8f} | PnL: {t['pnl_pct']:+.1f}% | Hold: {t['hold_days']}d")
                             elif t['type'] == 'SELL':
-                                print(f"    SELL {t['date']} @ ${t['price']:.8f} | PnL: {t['pnl_pct']:+.1f}% | Hold: {t['hold_days']}d")
+                                print(f"    SELL {date_str} @ ${t['price']:.8f} | PnL: {t['pnl_pct']:+.1f}% | Hold: {t['hold_days']}d")
+                            elif t['type'] == 'CLOSE':
+                                print(f"    CLOSE {date_str} @ ${t['price']:.8f} | PnL: {t['pnl_pct']:+.1f}%")
                             else:
-                                print(f"    BUY  {t['date']} @ ${t['price']:.8f} | Conf: {t['conf']*100:.0f}%")
+                                print(f"    BUY  {date_str} @ ${t['price']:.8f} | Conf: {t.get('conf',0)*100:.0f}%")
         
         # Summary
         if all_results:
