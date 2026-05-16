@@ -1,0 +1,83 @@
+{
+  "timestamp": "2026-05-15T20:46:30.121330",
+  "coins": [
+    "GIGA",
+    "ZEREBRO",
+    "BITTY",
+    "DOWGE",
+    "PENGO",
+    "OMEGAX",
+    "HACHI",
+    "HOUSE",
+    "TROLL",
+    "TOKABU",
+    "WOBBLES"
+  ],
+  "allocation": [
+    {
+      "coin": "ZEREBRO",
+      "weight": 0.1621382389350259,
+      "percentage": 16.213823893502592
+    },
+    {
+      "coin": "BITTY",
+      "weight": 0.1569864321885695,
+      "percentage": 15.698643218856951
+    },
+    {
+      "coin": "HOUSE",
+      "weight": 0.14272021261405146,
+      "percentage": 14.272021261405147
+    },
+    {
+      "coin": "WOBBLES",
+      "weight": 0.12921326401187788,
+      "percentage": 12.921326401187788
+    },
+    {
+      "coin": "HACHI",
+      "weight": 0.0935131805115271,
+      "percentage": 9.35131805115271
+    },
+    {
+      "coin": "PENGO",
+      "weight": 0.08887974612639518,
+      "percentage": 8.887974612639518
+    },
+    {
+      "coin": "TROLL",
+      "weight": 0.07122695273383897,
+      "percentage": 7.122695273383897
+    },
+    {
+      "coin": "TOKABU",
+      "weight": 0.054183003140411856,
+      "percentage": 5.418300314041185
+    },
+    {
+      "coin": "OMEGAX",
+      "weight": 0.05260562949822773,
+      "percentage": 5.2605629498227735
+    },
+    {
+      "coin": "DOWGE",
+      "weight": 0.025711228748067562,
+      "percentage": 2.5711228748067563
+    },
+    {
+      "coin": "GIGA",
+      "weight": 0.022822111492006844,
+      "percentage": 2.2822111492006845
+    }
+  ],
+  "metrics": {
+    "expected_daily_return": 0.012866453228631787,
+    "expected_annual_return": 4.696255428450602,
+    "daily_volatility": 0.04412800361577927,
+    "annual_volatility": 0.8430643253255905,
+    "sharpe_ratio": 0.2890877253049876,
+    "quantum_score": 0.6143756997829761
+  },
+  "risk_profile": "Very Aggressive",
+  "method": "quantum"
+}
