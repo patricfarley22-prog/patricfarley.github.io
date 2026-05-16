@@ -1,0 +1,77 @@
+{
+  "timestamp": "2026-05-15T20:52:16.288107",
+  "coin": "FWOG",
+  "contract": "A8C3xuqscfmyLrte3VmTqrAq8kgMASius9AFNANwpump",
+  "data": {
+    "symbol": "FWOG",
+    "price": 0.007815,
+    "market_cap": 7625246.0,
+    "liquidity": 1696491.74,
+    "volume_24h": 101217.91,
+    "volume_6h": 25037.91,
+    "volume_1h": 382.64,
+    "buys_24h": 372,
+    "sells_24h": 397,
+    "price_change_1h": -0.26,
+    "price_change_24h": -3.49,
+    "price_change_7d": 0.0,
+    "price_max_30d": 0.0,
+    "price_min_30d": 0.0,
+    "fdv": 7625246.0,
+    "chain": "solana",
+    "dex": "raydium",
+    "pair": "AB1eu2L1Jr3nfEft85AuD2zGksUbam1Kr8MR3uM2sjwt",
+    "url": "https://dexscreener.com/solana/ab1eu2l1jr3nfeft85aud2zgksubam1kr8mr3um2sjwt",
+    "created": 1722303257000
+  },
+  "metrics": {
+    "mcap_m": 7.625246,
+    "liquidity_ratio": 0.22248354217031163,
+    "vol_mcap_ratio": 1.3274051748625553,
+    "buy_sell_ratio": 0.9370277078085643,
+    "from_ath": 0,
+    "ath_change": 0,
+    "age_days": 655.0124916834513
+  },
+  "quantum": {
+    "confidence": 57.025000000000006,
+    "signal": "HOLD",
+    "expvals": [
+      0.168,
+      -0.196,
+      0.408,
+      0.182
+    ],
+    "features": [
+      0.7,
+      0.4,
+      0.6,
+      0.4
+    ],
+    "avg_exp": 0.1405
+  },
+  "risk": {
+    "overall": "LOW",
+    "details": {
+      "liquidity": "MEDIUM - Acceptable liquidity",
+      "volatility": "LOW - Low activity, may be stagnant",
+      "age": "LOW - Established",
+      "pressure": "MEDIUM - Selling pressure"
+    }
+  },
+  "recommendation": {
+    "signal": "HOLD",
+    "confidence": 57.025000000000006,
+    "risk": "LOW",
+    "potential": "2-5x",
+    "entry_price": 0.007815,
+    "targets": {
+      "conservative": 0.01563,
+      "moderate": 0.039075000000000006,
+      "aggressive": 0.07815000000000001,
+      "moon": 0.15630000000000002
+    },
+    "stop_loss": 0.0039075,
+    "position_size": "10-20% of portfolio (larger bet)"
+  }
+}
