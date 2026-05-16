@@ -1,0 +1,131 @@
+{
+  "timestamp": "2026-05-15T19:55:45.834974",
+  "chain": "solana",
+  "top_5": [
+    {
+      "symbol": "WOBBLES",
+      "name": "Wobbles",
+      "ca": "9yZ5Ru8pbmJZ6Q2DKLCGXkaLNwkm83cnJ4QCw4PFpump",
+      "market_cap": 883899.0,
+      "price": 0.0008862,
+      "volume_24h": 88121.19,
+      "change_24h": -11.54,
+      "change_7d": 0.0,
+      "ath": 0.008,
+      "ath_change": -88.6,
+      "from_ath": 1.0,
+      "chain": "solana",
+      "vol_ratio": 9.9695994678125,
+      "scores": {
+        "undervalued": 95,
+        "size": 100,
+        "recovery": 50,
+        "activity": 60,
+        "momentum": 70
+      },
+      "total_score": 79.0,
+      "quantum_confidence": 50.0,
+      "quantum_signal": "HOLD"
+    },
+    {
+      "symbol": "PENGO",
+      "name": "Pengo",
+      "ca": "F2k82EcxLtzekq1bfoGVdgp6EXZ5dLT1jE7g3LvQpump",
+      "market_cap": 600434.0,
+      "price": 0.0006004,
+      "volume_24h": 6157.96,
+      "change_24h": -14.78,
+      "change_7d": 0.0,
+      "ath": 0.005,
+      "ath_change": -88.2,
+      "from_ath": 1.0,
+      "chain": "solana",
+      "vol_ratio": 1.0255848269751546,
+      "scores": {
+        "undervalued": 95,
+        "size": 100,
+        "recovery": 50,
+        "activity": 40,
+        "momentum": 70
+      },
+      "total_score": 77.0,
+      "quantum_confidence": 50.0,
+      "quantum_signal": "HOLD"
+    },
+    {
+      "symbol": "OMEGAX",
+      "name": "OmegaX",
+      "ca": "4Aar9R14YMbEie6yh8WcH1gWXrBtfucoFjw6SpjXpump",
+      "market_cap": 364921.0,
+      "price": 0.0003649,
+      "volume_24h": 1366.75,
+      "change_24h": -4.85,
+      "change_7d": 0.0,
+      "ath": 0.003,
+      "ath_change": -87.8,
+      "from_ath": 1.0,
+      "chain": "solana",
+      "vol_ratio": 0.37453311812693707,
+      "scores": {
+        "undervalued": 95,
+        "size": 100,
+        "recovery": 50,
+        "activity": 40,
+        "momentum": 70
+      },
+      "total_score": 77.0,
+      "quantum_confidence": 50.0,
+      "quantum_signal": "HOLD"
+    },
+    {
+      "symbol": "BITTY",
+      "name": "The Bitcoin Mascot",
+      "ca": "dTzEP9JU2NRDPuWtM32gaVKip2fTHBqjheU1APBpump",
+      "market_cap": 878880.0,
+      "price": 0.0008794,
+      "volume_24h": 17874.81,
+      "change_24h": -4.99,
+      "change_7d": 0.0,
+      "ath": 0.01,
+      "ath_change": -90.8,
+      "from_ath": 1.0,
+      "chain": "solana",
+      "vol_ratio": 2.033816903331513,
+      "scores": {
+        "undervalued": 95,
+        "size": 100,
+        "recovery": 50,
+        "activity": 40,
+        "momentum": 70
+      },
+      "total_score": 77.0,
+      "quantum_confidence": 50.0,
+      "quantum_signal": "HOLD"
+    },
+    {
+      "symbol": "DOWGE",
+      "name": "Dowge",
+      "ca": "DQnkBM4eYYMnVE8Qy2K3BB7uts1fh2EwBVktEz6jpump",
+      "market_cap": 2833930.0,
+      "price": 0.002834,
+      "volume_24h": 36135.31,
+      "change_24h": -12.16,
+      "change_7d": 0.0,
+      "ath": 0.025,
+      "ath_change": -87.2,
+      "from_ath": 1.0,
+      "chain": "solana",
+      "vol_ratio": 1.2750953622707688,
+      "scores": {
+        "undervalued": 95,
+        "size": 90,
+        "recovery": 50,
+        "activity": 40,
+        "momentum": 70
+      },
+      "total_score": 74.5,
+      "quantum_confidence": 50.0,
+      "quantum_signal": "HOLD"
+    }
+  ]
+}
